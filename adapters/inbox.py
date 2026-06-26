@@ -55,7 +55,7 @@ def fetch(source: dict, cfg, timeout: int = 20) -> list[Item]:
     from_contains = [s.lower() for s in source.get("params", {}).get("from_contains", [])]
     items: list[Item] = []
     try:
-        conn = imaplib.IMAP4_SSL(cfg.IMAP_HOST)
+        conn = imaplib.IMAP4_SSL(cfg.IMAP_HOST, timeout=timeout)
         conn.login(cfg.IMAP_USER, cfg.IMAP_PASSWORD)
         conn.select(cfg.IMAP_FOLDER)
         typ, data = conn.search(None, "UNSEEN")
