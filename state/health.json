@@ -1,43 +1,43 @@
 {
   "sources": {
     "town_notify_inbox": {
-      "zero_runs": 5
+      "zero_runs": 6
     },
     "lps_district_news": {
       "zero_runs": 0,
-      "last_yield": "2026-06-26T20:38:04.082833+00:00"
+      "last_yield": "2026-06-26T21:05:39.566291+00:00"
     },
     "sean_for_littleton": {
-      "zero_runs": 0,
+      "zero_runs": 1,
       "last_yield": "2026-06-26T20:38:04.082843+00:00"
     },
     "patch_littleton": {
-      "zero_runs": 5
+      "zero_runs": 6
     },
     "lctv_youtube": {
       "zero_runs": 0,
-      "last_yield": "2026-06-26T20:38:04.082846+00:00"
+      "last_yield": "2026-06-26T21:05:39.566310+00:00"
     },
     "reddit_sitewide": {
       "zero_runs": 0,
-      "last_yield": "2026-06-26T20:38:04.082848+00:00"
+      "last_yield": "2026-06-26T21:05:39.566315+00:00"
     },
     "reddit_massachusetts": {
-      "zero_runs": 5
+      "zero_runs": 6
     },
     "conservation_trust": {
       "zero_runs": 0,
-      "last_yield": "2026-06-26T20:38:04.082851+00:00"
+      "last_yield": "2026-06-26T21:05:39.566320+00:00"
     },
     "lps_official_news": {
       "zero_runs": 0,
-      "last_yield": "2026-06-26T20:38:04.082840+00:00"
+      "last_yield": "2026-06-26T21:05:39.566303+00:00"
     },
     "lelwd": {
       "zero_runs": 0,
-      "last_yield": "2026-06-26T20:38:04.082854+00:00"
+      "last_yield": "2026-06-26T21:05:39.566324+00:00"
     }
   },
   "alert_runs": 3,
-  "last_run": "2026-06-26T20:38:04.082856+00:00"
+  "last_run": "2026-06-26T21:05:39.566328+00:00"
 }
