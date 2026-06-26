@@ -1,0 +1,8 @@
+feedparser>=6.0.11
+anthropic>=0.40.0
+PyYAML>=6.0.2
+python-dateutil>=2.9.0
+requests>=2.32.0
+# optional but recommended:
+youtube-transcript-api>=0.6.2   # LCTV meeting transcripts
+pypdf>=4.3.0                     # Town Meeting warrants / agenda PDFs (Phase 2)

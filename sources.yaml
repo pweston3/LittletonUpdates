@@ -1,0 +1,224 @@
+# Littleton, MA — Local Intelligence Agent · source config
+# Generated from littleton-source-registry.md. Edit freely; run.py reads this.
+#
+# Each source has:
+#   id:              unique slug
+#   name:            human label
+#   tier:            registry tier (1-10)
+#   kind:            adapter to use -> rss | reddit | youtube | inbox | pdf | manual
+#   enabled:         true/false
+#   weight:          relevance nudge (-20..+20) added to the model's score
+#   category:        default bucket if the classifier is unsure
+#   url / params:    adapter-specific
+#
+# Anything kind:manual is human-forward only (you email it into the inbox); it is
+# listed here for completeness but not fetched.
+
+defaults:
+  # Models (verified current). Haiku for high-volume classify/extract, Sonnet for the rollup.
+  classify_model: claude-haiku-4-5
+  rollup_model: claude-sonnet-4-6
+  # Items scoring at/above this make the digest. Lower = more inclusive.
+  relevance_threshold: 45
+  # User-Agent for polite fetching (Reddit in particular wants a descriptive one).
+  user_agent: "littleton-agent/0.1 (personal civic digest; contact: CHANGE_ME@example.com)"
+  digest_cadence: daily   # daily | weekly
+
+# Relevance profile — live threads + standing interests. The classifier weights
+# items mentioning these upward. Edit as the town's agenda shifts.
+relevance_profile:
+  high:
+    - Shaker Lane school project
+    - debt exclusion override
+    - King Street Common
+    - Lupoli
+    - EEA 16921
+    - Bluebird Farm
+    - Charter Committee
+    - UMass Memorial Satellite Emergency Facility
+    - transfer station
+    - Clean Lakes
+    - Beaver Brook
+    - 250th anniversary
+    - rail trail
+    - conservation land
+    - Planning Board
+    - Town Meeting warrant
+    - debt exclusion
+    - override
+  medium:
+    - Select Board
+    - Finance Committee
+    - Conservation Commission
+    - School Committee
+    - zoning
+    - special permit
+    - budget
+    - tax rate
+    - LELWD
+    - water
+    - election
+    - ballot
+
+sources:
+  # ── Tier 1 — Town of Littleton (CivicPlus backbone) ────────────────────────
+  # Primary route is the inbox: subscribe a dedicated Gmail to Notify Me + CivicReady,
+  # then this adapter reads it. The site's robots rule blocks fetching pages directly.
+  - id: town_notify_inbox
+    name: Town of Littleton — Notify Me / CivicReady (email push)
+    tier: 1
+    kind: inbox
+    enabled: true
+    weight: 10
+    category: town_hall
+    params:
+      # Items arrive by email; the inbox adapter tags anything from these senders.
+      from_contains:
+        - littletonma.org
+        - civicplus.com
+        - civicready.com
+
+  # RSS hub lives at littletonma.org/rss.aspx (form: RSSFeed.aspx?ModID=&CID=).
+  # Fill exact ModID/CID by opening rss.aspx in a browser. Disabled until then;
+  # the inbox above already covers this content.
+  - id: town_newsflash_news
+    name: Town News & Announcements (News Flash)
+    tier: 1
+    kind: rss
+    enabled: false
+    weight: 8
+    category: town_hall
+    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=__FILL__&CID=__FILL__"
+
+  - id: town_calendar
+    name: Town Meeting Calendar
+    tier: 1
+    kind: rss
+    enabled: false
+    weight: 6
+    category: town_hall
+    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=__FILL__&CID=__FILL__"
+
+  # ── Tier 3 — Schools ───────────────────────────────────────────────────────
+  - id: lps_district_news
+    name: Littleton Public Schools — District News
+    tier: 3
+    kind: rss
+    enabled: true
+    weight: 4
+    category: schools
+    # Campus Suite news; confirm the feed path at build. Page:
+    # https://www.littletonps.org/about-our-district/district-news
+    url: "https://www.littletonps.org/about-our-district/district-news?feed=rss"
+
+  - id: sean_for_littleton
+    name: Sean Aherne — Sean for Littleton (School Committee recaps)
+    tier: 3
+    kind: rss
+    enabled: true
+    weight: 8
+    category: schools
+    # Substack feeds are <site>/feed. If his Substack subdomain differs, update here.
+    url: "https://seanforlittleton.substack.com/feed"
+
+  # ── Tier 5 — Local news & aggregators ──────────────────────────────────────
+  - id: patch_littleton
+    name: Patch — Littleton
+    tier: 5
+    kind: rss
+    enabled: true
+    weight: 2
+    category: news
+    url: "https://patch.com/massachusetts/littleton-ma/rss"
+
+  # ── Tier 6 — Video (LCTV) ──────────────────────────────────────────────────
+  - id: lctv_youtube
+    name: Littleton Community Television (LCTV)
+    tier: 6
+    kind: youtube
+    enabled: true
+    weight: 5
+    category: town_hall
+    params:
+      channel_id: "UC0zDRpamgVdB71XZsDd72_g"
+      fetch_transcripts: true   # only for items that pass the relevance gate
+
+  # ── Tier 8 — Reddit (automatable) ──────────────────────────────────────────
+  - id: reddit_sitewide
+    name: Reddit — site-wide "Littleton MA"
+    tier: 8
+    kind: reddit
+    enabled: true
+    weight: 0
+    category: community
+    params:
+      query: '"Littleton MA" OR "Littleton Massachusetts"'
+      restrict_subreddit: false
+
+  - id: reddit_massachusetts
+    name: Reddit — r/massachusetts mentions
+    tier: 8
+    kind: reddit
+    enabled: true
+    weight: 0
+    category: community
+    params:
+      subreddit: massachusetts
+      query: Littleton
+      restrict_subreddit: true
+      timeframe: week
+
+  # ── Tier 8 — Community social (human-forward only; not fetched) ─────────────
+  - id: fb_whats_going_on
+    name: "FB group: Littleton MA – What's going on?"
+    tier: 8
+    kind: manual
+    enabled: false
+    category: community
+    url: "https://www.facebook.com/groups/littletonwhatsgoingon/"
+
+  - id: nextdoor_littleton
+    name: Nextdoor — Littleton, MA
+    tier: 8
+    kind: manual
+    enabled: false
+    category: community
+    url: "https://nextdoor.com/city/littleton--ma/"
+
+  # ── Tier 9 — Civic / conservation ──────────────────────────────────────────
+  - id: conservation_trust
+    name: Littleton Conservation Trust
+    tier: 9
+    kind: rss
+    enabled: true
+    weight: 4
+    category: conservation
+    url: "https://littletonconservationtrust.org/feed/"
+
+  - id: historical_society
+    name: Littleton Historical Society
+    tier: 9
+    kind: rss
+    enabled: false
+    weight: 1
+    category: community
+    url: "https://www.littletonhistoricalsociety.org/feed"
+
+  # ── Tier 10 — State & regional (big-project paper trail) ────────────────────
+  - id: mepa_monitor
+    name: MEPA Environmental Monitor (EEA filings)
+    tier: 10
+    kind: manual    # scrape target; left manual for v1 (no clean feed)
+    enabled: false
+    weight: 12
+    category: development
+    url: "https://eeaonline.eea.state.ma.us/EEA/emepa/"
+
+  - id: lelwd
+    name: Littleton Electric Light & Water (outages, rates)
+    tier: 4
+    kind: rss
+    enabled: false
+    weight: 3
+    category: utility
+    url: "https://www.lelwd.com/feed/"

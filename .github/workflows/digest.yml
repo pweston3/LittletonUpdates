@@ -1,0 +1,75 @@
+name: littleton-digest
+
+on:
+  schedule:
+    # 11:00 UTC ≈ 6-7am America/New_York. Adjust as you like.
+    - cron: "0 11 * * *"
+  workflow_dispatch: {}   # lets you run it on demand from the Actions tab
+
+permissions:
+  contents: write   # needed to commit the digest + state back
+
+concurrency:
+  group: littleton-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Inbox (Notify Me push + manual forwards) — optional
+          IMAP_USER: ${{ secrets.IMAP_USER }}
+          IMAP_PASSWORD: ${{ secrets.IMAP_PASSWORD }}
+          # Email delivery — optional
+          EMAIL_ENABLED: ${{ vars.EMAIL_ENABLED }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          DIGEST_TO: ${{ vars.DIGEST_TO }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+        run: python run.py
+
+      - name: Commit digest + state
+        run: |
+          git config user.name  "littleton-agent"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/ state/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "digest: $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+  # Publish docs/ to GitHub Pages. Enable Pages -> Source: GitHub Actions.
+  deploy-pages:
+    needs: digest
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
