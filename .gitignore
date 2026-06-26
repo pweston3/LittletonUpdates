@@ -7,3 +7,4 @@ venv/
 # but never commit local secrets:
 .env.local
 *.log
+.DS_Store

@@ -29,7 +29,7 @@ from pathlib import Path
 import yaml
 
 import config as cfg
-from adapters import rss, reddit, youtube, inbox, pdf_docs
+from adapters import rss, reddit, youtube, inbox, pdf_docs, campussuite
 from adapters.base import Item, now_utc
 from pipeline import dedupe, classify, extract, summarize
 from output import digest, email_send
@@ -64,6 +64,8 @@ def run_adapters(spec: dict, ua: str) -> list[Item]:
                 got = inbox.fetch(src, cfg, cfg.HTTP_TIMEOUT)
             elif kind == "pdf":
                 got = pdf_docs.fetch(src, ua, cfg.HTTP_TIMEOUT)
+            elif kind == "campussuite":
+                got = campussuite.fetch(src, ua, cfg.HTTP_TIMEOUT)
             else:
                 continue  # manual / unknown
         except Exception as exc:  # noqa: BLE001
