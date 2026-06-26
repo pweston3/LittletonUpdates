@@ -227,6 +227,35 @@ def _item_html(it: Item, lead: bool = False) -> str:
             f'<div class="meta">{"".join(chips)}</div></div></div></div>')
 
 
+def _partition(items: list[Item], today: date):
+    """Sort items by time. Returns (upcoming, past_lctv, undated, dropped).
+
+    Rules:
+      - Anything genuinely ahead (future event_date OR a future deadline) -> upcoming.
+      - A past LCTV upload is a recording of a meeting already held -> past_lctv (kept,
+        reframed as "watch the recording").
+      - ONLY a dated MEETING/EVENT-type item (non-LCTV) clearly before today is dropped
+        as stale (it lives on in the dated archive).
+      - EVERYTHING ELSE is kept as undated — news, announcements, recaps, and any item
+        with event_date=None are undated, NOT past. A date mentioned in a news item
+        never drops it.
+    """
+    upcoming, past_lctv, undated, dropped = [], [], [], []
+    for it in items:
+        ev = it.event_date
+        is_rec = _is_recording(it)
+        is_meeting_event = it.item_type in {"meeting", "hearing", "event"}
+        if (ev and ev >= today) or _future_deadlines(it, today):
+            upcoming.append(it)
+        elif is_rec and ev and ev <= today:
+            past_lctv.append(it)
+        elif is_meeting_event and not is_rec and ev and ev < today:
+            dropped.append(it)
+        else:
+            undated.append(it)
+    return upcoming, past_lctv, undated, dropped
+
+
 def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
     today = _today_ny()
 
@@ -237,20 +266,11 @@ def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
         log.warning("health: %d source(s) quiet for >= %s runs: %s",
                     len(unhealthy), health.get("alert_runs", 3), ", ".join(unhealthy))
 
-    # Partition by time so past events never read as upcoming.
-    upcoming, past_lctv, undated = [], [], []
-    for it in items:
-        ev = it.event_date
-        is_rec = _is_recording(it)
-        fut_dl = bool(_future_deadlines(it, today))
-        if is_rec and ev and ev <= today and not fut_dl:
-            past_lctv.append(it)            # LCTV upload = recording of a meeting already held
-        elif (ev and ev >= today) or fut_dl:
-            upcoming.append(it)
-        elif ev and ev < today:
-            continue                        # past, no ongoing value — only in the dated archive
-        else:
-            undated.append(it)              # news/announcements with no single event
+    # Partition by time so past events never read as upcoming (without dropping news).
+    upcoming, past_lctv, undated, dropped = _partition(items, today)
+    if dropped:
+        log.info("partition: archived %d stale dated meeting/event item(s): %s",
+                 len(dropped), ", ".join(strip_date_suffix(it.title)[:40] for it in dropped))
 
     thisweek = _thisweek_html(upcoming, today)
     ledger = _ledger_html(upcoming, today)

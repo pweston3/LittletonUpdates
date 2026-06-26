@@ -39,19 +39,32 @@ def _prune(seen: dict[str, str]) -> dict[str, str]:
     return out
 
 
-def filter_new(items: list[Item], seen_path: Path) -> list[Item]:
-    seen = _load(seen_path)
-    now_iso = datetime.now(timezone.utc).isoformat()
-    fresh: list[Item] = []
-    batch_hashes: set[str] = set()
+def dedupe_within(items: list[Item]) -> list[Item]:
+    """Collapse cross-source duplicates WITHIN a single run — the same meeting via the
+    calendar + Patch + newsletter should appear once.
+
+    Deliberately does NOT consult the seen-store: the published page is a current-state
+    snapshot, not an incremental feed. An item that already ran yesterday still belongs
+    on today's page if it's still current; the seen-store is only for the email's
+    "what's new" (see select_new)."""
+    out: list[Item] = []
+    batch: set[str] = set()
     for it in items:
         h = it.compute_hash()
-        if h in seen or h in batch_hashes:
+        if h in batch:
             continue
-        batch_hashes.add(h)
-        fresh.append(it)
-    log.info("dedupe: %d in -> %d new", len(items), len(fresh))
-    return fresh
+        batch.add(h)
+        out.append(it)
+    log.info("dedupe(within-run): %d in -> %d unique", len(items), len(out))
+    return out
+
+
+def select_new(items: list[Item], seen_path: Path) -> list[Item]:
+    """The subset not emitted on a prior run — the email's "what's new" set. The page
+    does NOT use this (it shows all current items). Items must already have a
+    content_hash (dedupe_within sets it)."""
+    seen = _load(seen_path)
+    return [it for it in items if it.content_hash and it.content_hash not in seen]
 
 
 def commit(items: list[Item], seen_path: Path) -> None:

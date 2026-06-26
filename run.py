@@ -160,8 +160,10 @@ def main() -> int:
     log.info("collected %d raw items", len(raw))
     health = update_health(spec, raw) if not args.sample else {"sources": {}, "alert_runs": 3}
 
-    # 2. dedupe
-    fresh = dedupe.filter_new(raw, cfg.SEEN_FILE)
+    # 2. collapse same-run duplicates only. The seen-store no longer gates the page —
+    #    the page is a current-state snapshot, so a still-current item from a prior run
+    #    stays on it. (The seen-store now only feeds the email's "what's new" at step 10.)
+    fresh = dedupe.dedupe_within(raw)
 
     # 3. classify + 4. extract
     fresh = classify.classify(fresh, profile,
@@ -188,8 +190,12 @@ def main() -> int:
     # 9. email
     email_send.send(html_doc, cfg, len(kept))
 
-    # 10. commit seen-store (skip in sample mode so tests stay repeatable)
+    # 10. seen-store: the page already shows every current item, so the store no longer
+    #     filters it — it only tracks what's NEW since the last run (the email's
+    #     "what's new" signal). Commit so that stays accurate. Skip in sample mode.
     if not args.sample:
+        new = dedupe.select_new(kept, cfg.SEEN_FILE)
+        log.info("%d of %d page items are new since last run", len(new), len(kept))
         dedupe.commit(kept, cfg.SEEN_FILE)
 
     log.info("done: %d items in today's digest", len(kept))
