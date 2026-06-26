@@ -9,8 +9,27 @@ from __future__ import annotations
 import hashlib
 import re
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from typing import Any
+
+
+# Shared date matcher: "April 1", "June 25th", "June 22, 2026", "4/1/2026".
+DATE_RE = re.compile(
+    r"\b("
+    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(?:st|nd|rd|th)?(?:,?\s+\d{4})?"
+    r"|\d{1,2}/\d{1,2}/\d{2,4}"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def strip_date_suffix(title: str) -> str:
+    """'Select Board - June 22, 2026' -> 'Select Board'. Leaves dateless titles alone."""
+    m = DATE_RE.search(title or "")
+    if not m:
+        return (title or "").strip()
+    base = title[: m.start()].strip(" -–—,·|:\t").strip()
+    return base or title.strip()
 
 
 CATEGORIES = [
@@ -53,7 +72,8 @@ class Item:
     url: str
     title: str
     body: str = ""
-    published: datetime | None = None
+    published: datetime | None = None    # for LCTV this is the UPLOAD time, not the meeting
+    event_date: date | None = None       # the meeting/hearing/deadline the item is ABOUT
     fetched: datetime = field(default_factory=now_utc)
     raw_id: str = ""
 
@@ -75,5 +95,6 @@ class Item:
     def to_dict(self) -> dict[str, Any]:
         d = asdict(self)
         d["published"] = self.published.isoformat() if self.published else None
+        d["event_date"] = self.event_date.isoformat() if self.event_date else None
         d["fetched"] = self.fetched.isoformat()
         return d

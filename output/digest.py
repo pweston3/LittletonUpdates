@@ -12,10 +12,17 @@ from __future__ import annotations
 
 import html
 import logging
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
-from adapters.base import Item
+from adapters.base import Item, strip_date_suffix
+
+_NY = ZoneInfo("America/New_York")  # cron runs in UTC; the page is for local readers
+
+
+def _today_ny() -> date:
+    return datetime.now(_NY).date()
 
 log = logging.getLogger("output.digest")
 
@@ -57,6 +64,19 @@ body{margin:0;background:var(--paper);color:var(--ink);
 .ledger .when{font-family:ui-monospace,Menlo,monospace;font-size:12px;
   font-weight:700;white-space:nowrap;min-width:78px}
 .ledger .what{font-size:13px;color:#36352d}
+.week{border:1px solid var(--ink);background:#fff;padding:16px 18px;margin:0 0 26px}
+.week h2{font-family:Georgia,"Times New Roman",serif;font-size:18px;font-weight:700;
+  margin:0 0 12px;letter-spacing:-.01em}
+.week ul{margin:0;padding:0;list-style:none}
+.week li{display:flex;gap:14px;padding:7px 0;border-top:1px dotted var(--line);align-items:baseline}
+.week li:first-child{border-top:none}
+.week .when{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:700;
+  color:var(--accent);white-space:nowrap;min-width:92px;text-transform:capitalize}
+.week .what{font-size:14px;color:var(--ink)}
+.week .kind{font-family:ui-monospace,Menlo,monospace;font-size:10px;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.05em;margin-left:6px}
+.week .empty{color:var(--muted);font-size:14px;font-family:inherit}
+.section.recordings > h2{color:var(--muted)}
 .section{margin:0 0 30px}
 .section > h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--muted);margin:0 0 4px;display:flex;justify-content:space-between}
@@ -83,7 +103,7 @@ a{color:var(--accent)}
   :root{--ink:#ece9df;--paper:#16160f;--line:#36352b;--muted:#9a978a;
     --accent:#e0795f;--accent-soft:#2a201c;--chip:#23231a}
   .ledger,.item a.title{background:transparent}
-  .ledger{background:#1d1d14}
+  .ledger,.week{background:#1d1d14}
 }
 """
 
@@ -96,30 +116,102 @@ def _esc(s: str) -> str:
     return html.escape(s or "")
 
 
-def _ledger_html(items: list[Item]) -> str:
+def _rel_date(d: date, today: date) -> str:
+    """Plain relative date: today / tomorrow / this Thursday / in 5 days."""
+    n = (d - today).days
+    if n == 0:
+        return "today"
+    if n == 1:
+        return "tomorrow"
+    if n == -1:
+        return "yesterday"
+    if 2 <= n <= 6:
+        return "this " + d.strftime("%A")
+    if n == 7:
+        return "next " + d.strftime("%A")
+    if n > 0:
+        return f"in {n} days"
+    return f"{-n} days ago"
+
+
+def _countdown(d: date, today: date) -> str:
+    n = (d - today).days
+    if n <= 0:
+        return "closes today"
+    if n == 1:
+        return "closes tomorrow"
+    return f"in {n} days"
+
+
+def _is_recording(it: Item) -> bool:
+    return "youtube.com" in (it.url or "") or "youtu.be" in (it.url or "")
+
+
+def _future_deadlines(it: Item, today: date) -> list[tuple[date, dict]]:
+    out = []
+    for dd in it.deadlines:
+        try:
+            d = date.fromisoformat(dd["date"])
+        except Exception:
+            continue
+        if d >= today:
+            out.append((d, dd))
+    return out
+
+
+def _ledger_html(items: list[Item], today: date) -> str:
+    """Future deadlines only, with a countdown."""
     rows = []
     for it in items:
-        for d in it.deadlines:
-            rows.append((d["date"], d.get("label", it.title), it.url))
+        for d, dd in _future_deadlines(it, today):
+            rows.append((d, dd.get("label", it.title), it.url))
     if not rows:
         return ""
     rows.sort(key=lambda x: x[0])
     seen, lis = set(), []
-    for date, label, url in rows:
-        key = (date, label[:40])
+    for d, label, url in rows:
+        key = (d.isoformat(), label[:40])
         if key in seen:
             continue
         seen.add(key)
-        try:
-            pretty = datetime.fromisoformat(date).strftime("%b %-d")
-        except Exception:
-            pretty = date
+        when = _countdown(d, today)
         what = f'<a href="{_esc(url)}">{_esc(label)}</a>' if url else _esc(label)
-        lis.append(f'<li><span class="when">{pretty}</span><span class="what">{what}</span></li>')
+        lis.append(f'<li><span class="when">{_esc(when)}</span><span class="what">{what}</span></li>')
     if not lis:
         return ""
-    return ('<div class="ledger"><h2>Deadline ledger</h2><ul>'
+    return ('<div class="ledger"><h2>Upcoming deadlines</h2><ul>'
             + "".join(lis) + "</ul></div>")
+
+
+def _thisweek_html(items: list[Item], today: date) -> str:
+    """Lead block: meetings, hearings, and deadlines within the next 7 days."""
+    horizon = today + timedelta(days=7)
+    rows, seen = [], set()
+    for it in items:
+        ev = it.event_date
+        if ev and today <= ev <= horizon:
+            label = strip_date_suffix(it.title) or it.title
+            k = (ev, "event", label[:60])
+            if k not in seen:
+                seen.add(k); rows.append((ev, "event", label, it.url))
+        for d, dd in _future_deadlines(it, today):
+            if d <= horizon:
+                label = dd.get("label", it.title)[:100]
+                k = (d, "deadline", label[:40])
+                if k not in seen:
+                    seen.add(k); rows.append((d, "deadline", label, it.url))
+    rows.sort(key=lambda x: x[0])
+    if not rows:
+        inner = '<li><span class="empty">Nothing on the public calendar in the next 7 days.</span></li>'
+    else:
+        lis = []
+        for d, kind, label, url in rows:
+            what = f'<a href="{_esc(url)}">{_esc(label)}</a>' if url else _esc(label)
+            tag = "" if kind == "event" else '<span class="kind">deadline</span>'
+            lis.append(f'<li><span class="when">{_esc(_rel_date(d, today))}</span>'
+                       f'<span class="what">{what}{tag}</span></li>')
+        inner = "".join(lis)
+    return f'<div class="week"><h2>This week in Littleton</h2><ul>{inner}</ul></div>'
 
 
 def _item_html(it: Item, lead: bool = False) -> str:
@@ -136,15 +228,37 @@ def _item_html(it: Item, lead: bool = False) -> str:
 
 
 def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
-    items = sorted(items, key=lambda x: x.relevance, reverse=True)
-    today = datetime.now(timezone.utc).astimezone()
-    dateline = f"Littleton, Mass · 01460 · {today.strftime('%A, %B %-d, %Y')}"
+    today = _today_ny()
 
-    ledger = _ledger_html(items)
+    # Source health is operational telemetry — log it for the Actions run, not the page.
+    unhealthy = [s for s, info in health.get("sources", {}).items()
+                 if info.get("zero_runs", 0) >= health.get("alert_runs", 3)]
+    if unhealthy:
+        log.warning("health: %d source(s) quiet for >= %s runs: %s",
+                    len(unhealthy), health.get("alert_runs", 3), ", ".join(unhealthy))
 
-    # group by category, preserving the configured order
-    by_cat: dict[str, list[Item]] = {}
+    # Partition by time so past events never read as upcoming.
+    upcoming, past_lctv, undated = [], [], []
     for it in items:
+        ev = it.event_date
+        is_rec = _is_recording(it)
+        fut_dl = bool(_future_deadlines(it, today))
+        if is_rec and ev and ev <= today and not fut_dl:
+            past_lctv.append(it)            # LCTV upload = recording of a meeting already held
+        elif (ev and ev >= today) or fut_dl:
+            upcoming.append(it)
+        elif ev and ev < today:
+            continue                        # past, no ongoing value — only in the dated archive
+        else:
+            undated.append(it)              # news/announcements with no single event
+
+    thisweek = _thisweek_html(upcoming, today)
+    ledger = _ledger_html(upcoming, today)
+
+    # Main sections: future-dated + undated news, by relevance, grouped by category.
+    main_items = sorted(upcoming + undated, key=lambda x: x.relevance, reverse=True)
+    by_cat: dict[str, list[Item]] = {}
+    for it in main_items:
         by_cat.setdefault(it.category, []).append(it)
     sections = []
     for cat in _CAT_ORDER:
@@ -156,16 +270,23 @@ def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
             f'<div class="section"><h2><span>{_CAT_LABELS.get(cat, cat)}</span>'
             f'<span style="color:var(--line)">{len(bucket)}</span></h2>{rows}</div>'
         )
-
     if not sections:
         sections.append('<div class="section"><p style="color:var(--muted)">'
-                        'No new items cleared the relevance threshold today.</p></div>')
+                        'No current items today — check back tomorrow.</p></div>')
 
-    # health footer
-    unhealthy = [s for s, info in health.get("sources", {}).items()
-                 if info.get("zero_runs", 0) >= health.get("alert_runs", 3)]
-    health_line = (f'<span class="bad">⚠ {len(unhealthy)} source(s) quiet: '
-                   f'{", ".join(unhealthy)}</span>') if unhealthy else "All sources reporting."
+    # Recent meetings you can still watch.
+    recordings = ""
+    if past_lctv:
+        past_lctv.sort(key=lambda x: x.event_date or today, reverse=True)
+        rows = "".join(_item_html(it, lead=(n == 0)) for n, it in enumerate(past_lctv))
+        recordings = (
+            '<div class="section recordings"><h2>'
+            '<span>Recent meetings — watch the recording</span>'
+            f'<span style="color:var(--line)">{len(past_lctv)}</span></h2>{rows}</div>'
+        )
+
+    shown = len(main_items) + len(past_lctv)
+    dateline = f"Littleton, Mass · 01460 · {today.strftime('%A, %B %-d, %Y')}"
 
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -177,11 +298,12 @@ def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
   <div class="masthead">Littleton <span class="accent">Signal</span></div>
   <div class="rule"></div>
   <div class="rollup">{_esc(rollup_text)}</div>
+  {thisweek}
   {ledger}
   {''.join(sections)}
+  {recordings}
   <div class="foot">
-    {len(items)} item(s) · generated {today.strftime('%Y-%m-%d %H:%M %Z')}
-    <div class="health">{health_line}</div>
+    {shown} item(s) · Updated {today.strftime('%B %-d, %Y')}
   </div>
 </div></body></html>"""
 
@@ -191,7 +313,7 @@ def write(items: list[Item], rollup_text: str, health: dict,
     html_doc = build_html(items, rollup_text, health)
     docs_dir.mkdir(parents=True, exist_ok=True)
     archive_dir.mkdir(parents=True, exist_ok=True)
-    today = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d")
+    today = _today_ny().strftime("%Y-%m-%d")
 
     (docs_dir / "index.html").write_text(html_doc)
     (archive_dir / f"{today}.html").write_text(html_doc)

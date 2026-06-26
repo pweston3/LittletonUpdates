@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so the commit-back can rebase before pushing
 
       - uses: actions/setup-python@v5
         with:
@@ -48,10 +50,22 @@ jobs:
           git add docs/ state/
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "digest: $(date -u +%Y-%m-%d)"
-            git push
+            exit 0
           fi
+          git commit -m "digest: $(date -u +%Y-%m-%d)"
+          # The checkout can be behind origin — a re-run pinned to an old sha, or a
+          # concurrent push. Push; if rejected, rebase our generated commit onto the
+          # latest branch (keeping our freshly-built docs/state on conflict) and retry.
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt) — rebasing onto origin/${GITHUB_REF_NAME}"
+            git pull --rebase --autostash -X theirs origin "${GITHUB_REF_NAME}"
+          done
+          echo "commit-back still rejected after 3 attempts"
+          exit 1
 
   # Publish docs/ to GitHub Pages. Enable Pages -> Source: GitHub Actions.
   deploy-pages:
