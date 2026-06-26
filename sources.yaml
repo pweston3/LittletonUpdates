@@ -21,7 +21,7 @@ defaults:
   # Items scoring at/above this make the digest. Lower = more inclusive.
   relevance_threshold: 45
   # User-Agent for polite fetching (Reddit in particular wants a descriptive one).
-  user_agent: "littleton-agent/0.1 (personal civic digest; contact: CHANGE_ME@example.com)"
+  user_agent: "littleton-agent/0.1 (personal civic digest; contact: littletonupdates@gmail.com)"
   digest_cadence: daily   # daily | weekly
 
 # Relevance profile — live threads + standing interests. The classifier weights
@@ -101,15 +101,33 @@ sources:
 
   # ── Tier 3 — Schools ───────────────────────────────────────────────────────
   - id: lps_district_news
-    name: Littleton Public Schools — District News
+    name: Littleton Public Schools — news (via Google News)
     tier: 3
     kind: rss
     enabled: true
     weight: 4
     category: schools
-    # Campus Suite news; confirm the feed path at build. Page:
-    # https://www.littletonps.org/about-our-district/district-news
-    url: "https://www.littletonps.org/about-our-district/district-news?feed=rss"
+    # The LPS site runs on Campus Suite (site id 01chzeety8kgmexz682bgwmewa) and
+    # exposes NO public RSS — district news (registry-tagged [SCRAPE]) lives behind
+    # a JS app. As an RSS-native stand-in we query Google News for LPS coverage,
+    # which surfaces the regional outlets (Lowell Sun, Wicked Local, MassLive) that
+    # carry LPS stories. School Committee specifics come via sean_for_littleton.
+    # Companion first-party source below (lps_official_news) scrapes LPS's own
+    # announcements; this Google News proxy covers external press coverage.
+    url: "https://news.google.com/rss/search?q=%22Littleton+Public+Schools%22+Massachusetts&hl=en-US&gl=US&ceid=US:en"
+
+  - id: lps_official_news
+    name: Littleton Public Schools — official announcements
+    tier: 3
+    kind: campussuite
+    enabled: true
+    weight: 5
+    category: schools
+    # First-party LPS news. The Campus Suite site has no RSS, but the news-list
+    # page is server-rendered HTML; the campussuite adapter parses its
+    # cs-li-default-* article blocks (title + teaser + permalink). Complements the
+    # lps_district_news Google News proxy above (announcements vs. press coverage).
+    url: "https://www.littletonps.org/about-our-district/district-news"
 
   - id: sean_for_littleton
     name: Sean Aherne — Sean for Littleton (School Committee recaps)
@@ -118,8 +136,9 @@ sources:
     enabled: true
     weight: 8
     category: schools
-    # Substack feeds are <site>/feed. If his Substack subdomain differs, update here.
-    url: "https://seanforlittleton.substack.com/feed"
+    # seanforlittleton.com is a Squarespace landing page; the actual Substack lives
+    # at the seanpaherne subdomain (linked from that page). Feed = <subdomain>/feed.
+    url: "https://seanpaherne.substack.com/feed"
 
   # ── Tier 5 — Local news & aggregators ──────────────────────────────────────
   - id: patch_littleton
@@ -129,7 +148,9 @@ sources:
     enabled: true
     weight: 2
     category: news
-    url: "https://patch.com/massachusetts/littleton-ma/rss"
+    # Patch's per-town feed lives under /feeds/aol/<state>/<town> (legacy AOL path),
+    # not /rss. Valid RSS; may be empty when Littleton Patch has no recent articles.
+    url: "https://patch.com/feeds/aol/massachusetts/littleton-ma"
 
   # ── Tier 6 — Video (LCTV) ──────────────────────────────────────────────────
   - id: lctv_youtube
@@ -218,7 +239,17 @@ sources:
     name: Littleton Electric Light & Water (outages, rates)
     tier: 4
     kind: rss
-    enabled: false
+    enabled: true
     weight: 3
     category: utility
+    # WordPress site; /feed/ is the canonical feed (declared in the page's
+    # <link rel="alternate" type="application/rss+xml">). Verified: 10 entries.
     url: "https://www.lelwd.com/feed/"
+
+  - id: lelwd_facebook
+    name: LELWD — Facebook
+    tier: 4
+    kind: manual    # login-walled; human-forward. Substantive news already comes via lelwd RSS above.
+    enabled: false
+    category: utility
+    url: "https://www.facebook.com/LELWD/"

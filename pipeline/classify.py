@@ -31,8 +31,10 @@ New Hampshire) score 0.
 Priority topics (boost these): {high}
 Secondary topics: {medium}
 
-Return ONLY a JSON array, one object per item, in the same order, no prose:
-[{{"category": "...", "type": "...", "relevance": 0-100}}]"""
+Each input item has an integer "i". Return ONLY a JSON array with one object per
+item, echoing that "i" so results map back even if order shifts. Include every i.
+No prose:
+[{{"i": 0, "category": "...", "type": "...", "relevance": 0-100}}]"""
 
 
 def _heuristic(item: Item, profile: dict) -> tuple[str, str, int]:
@@ -76,7 +78,7 @@ def _heuristic(item: Item, profile: dict) -> tuple[str, str, int]:
     return cat, itype, min(score, 100)
 
 
-def _llm(items: list[Item], profile: dict, model: str, api_key: str) -> list[tuple[str, str, int]]:
+def _llm(items: list[Item], profile: dict, model: str, api_key: str) -> list[tuple[str, str, int] | None]:
     from anthropic import Anthropic
 
     client = Anthropic(api_key=api_key)
@@ -90,42 +92,52 @@ def _llm(items: list[Item], profile: dict, model: str, api_key: str) -> list[tup
         high="; ".join(profile.get("high", [])),
         medium="; ".join(profile.get("medium", [])),
     )
+    # One compact JSON object per item (~30-40 tokens each); size the ceiling to
+    # the batch so a large day's items don't truncate the array and silently fall
+    # back to the heuristic. Capped to stay non-streaming and under HTTP timeouts.
+    max_tokens = min(16000, 64 * len(items) + 500)
     resp = client.messages.create(
         model=model,
-        max_tokens=2000,
+        max_tokens=max_tokens,
         system=system,
         messages=[{"role": "user", "content": json.dumps(payload)}],
     )
     text = "".join(b.text for b in resp.content if b.type == "text").strip()
     text = text.replace("```json", "").replace("```", "").strip()
     data = json.loads(text)
-    out: list[tuple[str, str, int]] = []
-    for d in data:
+    # Map by the echoed index so a dropped/merged item only loses itself (filled
+    # by the heuristic downstream), instead of discarding the whole batch.
+    out: list[tuple[str, str, int] | None] = [None] * len(items)
+    for n, d in enumerate(data):
+        idx = d.get("i", n)
+        if not isinstance(idx, int) or not 0 <= idx < len(items):
+            continue
         cat = d.get("category", "other")
-        out.append((
+        out[idx] = (
             cat if cat in CATEGORIES else "other",
             d.get("type", "news") if d.get("type") in ITEM_TYPES else "news",
             int(d.get("relevance", 0)),
-        ))
+        )
     return out
 
 
 def classify(items: list[Item], profile: dict, *, model: str, api_key: str) -> list[Item]:
     if not items:
         return items
-    results = None
+    results: list[tuple[str, str, int] | None] | None = None
     if api_key:
         try:
             results = _llm(items, profile, model, api_key)
-            if len(results) != len(items):
-                log.warning("llm returned %d for %d items; falling back", len(results), len(items))
-                results = None
+            missing = sum(1 for r in results if r is None)
+            if missing:
+                log.info("llm classified %d/%d; heuristic fills the other %d",
+                         len(items) - missing, len(items), missing)
         except Exception as exc:  # noqa: BLE001
             log.warning("llm classify failed (%s); using heuristic", exc)
             results = None
 
     for n, it in enumerate(items):
-        if results:
+        if results and results[n] is not None:
             it.category, it.item_type, it.relevance = results[n]
         else:
             it.category, it.item_type, it.relevance = _heuristic(it, profile)
