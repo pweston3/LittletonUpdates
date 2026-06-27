@@ -1,58 +1,58 @@
 {
   "sources": {
     "town_notify_inbox": {
-      "zero_runs": 13
+      "zero_runs": 14
     },
     "lps_district_news": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.396989+00:00"
+      "last_yield": "2026-06-27T01:43:21.816367+00:00"
     },
     "sean_for_littleton": {
       "zero_runs": 7,
       "last_yield": "2026-06-26T20:38:04.082843+00:00"
     },
     "patch_littleton": {
-      "zero_runs": 13
+      "zero_runs": 14
     },
     "lctv_youtube": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.397001+00:00"
+      "last_yield": "2026-06-27T01:43:21.816377+00:00"
     },
     "reddit_sitewide": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.397004+00:00"
+      "last_yield": "2026-06-27T01:43:21.816381+00:00"
     },
     "reddit_massachusetts": {
-      "zero_runs": 13
+      "zero_runs": 14
     },
     "conservation_trust": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.397008+00:00"
+      "last_yield": "2026-06-27T01:43:21.816386+00:00"
     },
     "lps_official_news": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.396994+00:00"
+      "last_yield": "2026-06-27T01:43:21.816371+00:00"
     },
     "lelwd": {
-      "zero_runs": 0,
+      "zero_runs": 1,
       "last_yield": "2026-06-27T01:08:19.397010+00:00"
     },
     "town_calendar": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.396966+00:00"
+      "last_yield": "2026-06-27T01:43:21.816341+00:00"
     },
     "town_agendas": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.396978+00:00"
+      "last_yield": "2026-06-27T01:43:21.816356+00:00"
     },
     "town_newsflash": {
       "zero_runs": 0,
-      "last_yield": "2026-06-27T01:08:19.396983+00:00"
+      "last_yield": "2026-06-27T01:43:21.816361+00:00"
     },
     "town_alerts": {
-      "zero_runs": 4
+      "zero_runs": 5
     }
   },
   "alert_runs": 3,
-  "last_run": "2026-06-27T01:08:19.397012+00:00"
+  "last_run": "2026-06-27T01:43:21.816391+00:00"
 }
