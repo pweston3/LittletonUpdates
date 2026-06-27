@@ -31,7 +31,7 @@ import yaml
 import config as cfg
 from adapters import rss, reddit, youtube, inbox, pdf_docs, campussuite
 from adapters.base import Item, now_utc
-from pipeline import dedupe, classify, extract, summarize
+from pipeline import dedupe, decompose, classify, extract, summarize
 from output import digest, email_send
 
 logging.basicConfig(
@@ -164,6 +164,9 @@ def main() -> int:
     #    the page is a current-state snapshot, so a still-current item from a prior run
     #    stays on it. (The seen-store now only feeds the email's "what's new" at step 10.)
     fresh = dedupe.dedupe_within(raw)
+
+    # 2b. split multi-topic recap posts into their constituent, categorized topics
+    fresh = decompose.decompose(fresh, model=classify_model, api_key=cfg.ANTHROPIC_API_KEY)
 
     # 3. classify + 4. extract
     fresh = classify.classify(fresh, profile,

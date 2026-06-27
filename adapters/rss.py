@@ -49,10 +49,14 @@ def fetch(source: dict, user_agent: str, timeout: int = 20) -> list[Item]:
     for e in parsed.entries:
         title = clean_text(getattr(e, "title", ""), 400)
         link = getattr(e, "link", "") or url
-        body = clean_text(
-            getattr(e, "summary", "") or getattr(e, "description", "")
-            or (e.get("content", [{}])[0].get("value") if hasattr(e, "get") else "")
-        )
+        summary = getattr(e, "summary", "") or getattr(e, "description", "") or ""
+        content = ""
+        if getattr(e, "content", None):
+            content = e.content[0].get("value", "") or ""
+        # Prefer the full post (content:encoded) when it's richer than the teaser
+        # summary — Substack feeds put the whole recap there, which the decompose
+        # step needs and which gives every feed better text to classify/summarize.
+        body = clean_text(content if len(content) > len(summary) else summary)
         if not title and not body:
             continue
         items.append(
