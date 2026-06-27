@@ -78,26 +78,45 @@ sources:
         - civicplus.com
         - civicready.com
 
-  # RSS hub lives at littletonma.org/rss.aspx (form: RSSFeed.aspx?ModID=&CID=).
-  # Fill exact ModID/CID by opening rss.aspx in a browser. Disabled until then;
-  # the inbox above already covers this content.
-  - id: town_newsflash_news
-    name: Town News & Announcements (News Flash)
-    tier: 1
-    kind: rss
-    enabled: false
-    weight: 8
-    category: town_hall
-    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=__FILL__&CID=__FILL__"
-
+  # RSS backbone — the town's CivicPlus "All" rollup feeds (catalogued at
+  # littletonma.org/rss.aspx). Verified to return XML with our User-Agent. The inbox
+  # above carries the same content by push; these add structured, dated calendar/agenda
+  # items the digest places on the timeline (upcoming meetings, "This week").
   - id: town_calendar
     name: Town Meeting Calendar
     tier: 1
     kind: rss
-    enabled: false
+    enabled: true
     weight: 6
     category: town_hall
-    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=__FILL__&CID=__FILL__"
+    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=58&CID=All-calendar.xml"
+
+  - id: town_agendas
+    name: Agenda Center — agendas & minutes
+    tier: 1
+    kind: rss
+    enabled: true
+    weight: 7
+    category: town_hall
+    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=65&CID=All-0"
+
+  - id: town_newsflash
+    name: Town News & Announcements (News Flash)
+    tier: 1
+    kind: rss
+    enabled: true
+    weight: 8
+    category: town_hall
+    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml"
+
+  - id: town_alerts
+    name: Alert Center (emergency / public-safety)
+    tier: 1
+    kind: rss
+    enabled: true
+    weight: 9
+    category: public_safety
+    url: "https://www.littletonma.org/RSSFeed.aspx?ModID=63&CID=All-0"
 
   # ── Tier 3 — Schools ───────────────────────────────────────────────────────
   - id: lps_district_news
