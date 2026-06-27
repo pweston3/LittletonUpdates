@@ -25,14 +25,15 @@ import logging
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import yaml
 
 import config as cfg
 from adapters import rss, reddit, youtube, inbox, pdf_docs, campussuite
 from adapters.base import Item, now_utc
-from pipeline import dedupe, decompose, classify, extract, summarize
-from output import digest, email_send
+from pipeline import dedupe, decompose, classify, extract, summarize, weekly
+from output import digest, email_send, editions
 
 logging.basicConfig(
     level=logging.INFO,
@@ -186,8 +187,17 @@ def main() -> int:
     summarize.summarize_items(kept, model=rollup_model, api_key=cfg.ANTHROPIC_API_KEY)
     rollup_text = summarize.rollup(kept, model=rollup_model, api_key=cfg.ANTHROPIC_API_KEY)
 
-    # 8. render
-    digest.write(kept, rollup_text, health, cfg.DOCS_DIR, cfg.ARCHIVE_DIR)
+    # 7b. weekly edition — generate/refresh "The Week in Littleton" (skipped in sample)
+    edition, all_editions = (None, [])
+    if not args.sample:
+        today_ny = datetime.now(ZoneInfo("America/New_York")).date()
+        edition, all_editions = weekly.current_edition(
+            kept, model=rollup_model, api_key=cfg.ANTHROPIC_API_KEY,
+            today=today_ny, state_path=cfg.SEEN_FILE.parent / "editions.json")
+
+    # 8. render — daily page + weekly edition + past-editions archive
+    digest.write(kept, rollup_text, health, cfg.DOCS_DIR, cfg.ARCHIVE_DIR, edition=edition)
+    editions.write(edition, all_editions, cfg.DOCS_DIR)
     html_doc = (cfg.DOCS_DIR / "index.html").read_text()
 
     # 9. email

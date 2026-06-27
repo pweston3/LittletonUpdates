@@ -1,12 +1,13 @@
 """Render the digest as a single self-contained HTML page.
 
 Design: "Littleton Signal" — a broadsheet civic front page on dotted cream paper
-(#ECE3CC) with a navy masthead (#102A54), a gold bird mark, a gold/navy hazard
-torn-edge, and the signature hard offset shadows (navy under gold boxes, gold
-under navy). Newsreader serif headlines, Public Sans labels, Libre Caslon
-wordmark; gold accent (#F4B41A) with per-category colors and a green relevance /
-red TODAY accent. Two columns: lead story + colored card-grid sections on the
-left; a gold Deadline Ledger and navy "This Week in Town" on the right.
+(#efe7d6) with a sticky navy masthead (#102A54), a gold/navy hazard stripe, and the
+signature hard offset shadows (gold under navy boxes, navy under gold). Newsreader
+serif headlines, Public Sans labels, Libre Caslon wordmark; gold accent (#F4B41A)
+with per-category colors. Above the fold: a Weekly Edition marquee (links to
+week.html) beside a gold Deadline Ledger and navy "This Week in Town". Below: a
+category filter bar and colored card-grid sections, with the top stories flagged
+as Editor's picks.
 
 The same HTML is written to docs/index.html (GitHub Pages) and archived by date,
 and reused as the email body. All time logic is in America/New_York.
@@ -72,141 +73,137 @@ _FONTS = ("https://fonts.googleapis.com/css2?"
 
 _CSS = """
 :root{
-  --paper:#ECE3CC; --card:#FBF7EC; --ink:#1A1408; --muted:#5C574D; --faint:#9A8F70;
-  --hair:#CDBF9E; --gold:#F4B41A; --gold-deep:#C8881A; --navy:#102A54; --navy-2:#0B1D3E;
+  --paper:#efe7d6; --dots:#e2d8bf; --band:#e6dabf; --card:#fbf7ec; --ink:#15120c;
+  --muted:#5c574d; --faint:#9a937f; --hair:#cdbf9e; --line:#1a1408;
+  --gold:#F4B41A; --gold-deep:#C8881A; --gold-ink:#7a4e06; --navy:#102A54;
   --green:#2E7D5B; --red:#B3472D;
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --display:"Libre Caslon Text","Newsreader",Georgia,serif;
 }
 *{box-sizing:border-box}
-body{margin:0;color:var(--ink);font-family:var(--sans);line-height:1.5;
+body{margin:0;color:#1b1813;font-family:var(--sans);line-height:1.5;
   background-color:var(--paper);
-  background-image:radial-gradient(rgba(26,20,8,.07) 1.4px,transparent 1.5px);
-  background-size:24px 24px;-webkit-font-smoothing:antialiased}
+  background-image:radial-gradient(var(--dots) 1.1px,transparent 1.1px);
+  background-size:21px 21px;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.eyebrow{font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
-.in{max-width:1200px;margin:0 auto;padding:0 30px}
+::selection{background:var(--gold);color:#15120c}
+.in{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.torn{height:7px;background:repeating-linear-gradient(-60deg,var(--navy) 0 11px,var(--gold) 11px 22px)}
 
-/* ── masthead ─────────────────────────────────────────────── */
-.mast{background:var(--navy);color:#fff;padding:20px 0 0}
-.mast .eyebrow{color:var(--gold);margin-bottom:10px}
-.mast-row{display:flex;align-items:center;justify-content:space-between;gap:18px;
-  flex-wrap:wrap;padding-bottom:20px}
-.brand{display:flex;align-items:center;gap:16px}
-.mark{flex:0 0 auto}
-.wordmark{font-family:var(--display);font-weight:700;font-size:46px;line-height:1;color:#fff}
-.tagline{font-weight:800;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold);margin-top:8px}
-.badge{display:flex;align-items:center;gap:14px;background:var(--gold);color:var(--navy);
-  border:2px solid #d89d10;border-radius:12px;padding:10px 18px}
-.badge .n{font-family:var(--display);font-weight:700;font-size:38px;line-height:.85;text-align:center}
-.badge .n small{display:block;font-family:var(--sans);font-weight:800;font-size:9px;letter-spacing:.12em}
-.badge .lab{font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-  border-left:2px solid rgba(16,42,84,.3);padding-left:14px;line-height:1.35}
-.badge .lab b{display:block;font-size:16px;letter-spacing:0;text-transform:none;margin-top:3px}
-.navband{background:var(--navy-2)}
-.nav{display:flex;gap:11px;flex-wrap:wrap;padding:13px 0}
-.nav a{font-weight:700;font-size:13.5px;color:#cdd6e6;text-decoration:none;padding:8px 17px;
-  border-radius:8px;border:1px solid rgba(205,214,230,.22)}
-.nav a.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
-.torn{height:8px;background:repeating-linear-gradient(45deg,var(--gold) 0 9px,var(--navy) 9px 18px)}
+/* ── header (sticky) ──────────────────────────────────────── */
+.mast{position:sticky;top:0;z-index:20;background:var(--navy)}
+.mast .in{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding-top:14px;padding-bottom:14px}
+.brand{flex:1 1 auto;min-width:0}
+.kicker{font-weight:800;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.wordmark{font-family:var(--display);font-size:clamp(26px,4.4vw,36px);line-height:1;color:#fff;margin-top:7px}
+.tagline{font-weight:700;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#d6bd6a;margin-top:8px}
+.cd{flex:0 0 auto;display:flex;align-items:center;gap:11px;text-decoration:none;
+  background:var(--gold);border-radius:12px;padding:9px 14px}
+.cd .d{font-weight:800;font-size:22px;line-height:1;color:var(--navy);text-align:center}
+.cd .u{font-weight:700;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);margin-top:3px}
+.cd .l{border-left:1px solid rgba(122,78,6,.35);padding-left:11px}
+.cd .t{font-weight:800;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink)}
+.cd .w{font-weight:700;font-size:13px;line-height:1.2;color:#15120c;margin-top:3px}
 
-/* ── layout ───────────────────────────────────────────────── */
-.wrap{max-width:1200px;margin:0 auto;padding:36px 30px 80px}
-.grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:38px;align-items:start;margin:0 0 40px}
-@media (max-width:820px){.grid{grid-template-columns:1fr}}
-
-/* lead story */
-.lead{background:var(--card);border:2px solid var(--ink);box-shadow:11px 11px 0 var(--navy)}
-.lead-img{position:relative;height:300px;border-bottom:2px solid var(--ink);
-  background:repeating-linear-gradient(-45deg,#e9dfc6 0 15px,#e0d5b7 15px 30px)}
-.pill{font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
-  background:var(--gold);color:var(--navy);padding:7px 14px;border-radius:4px}
-.lead-img .pill{position:absolute;left:26px;bottom:24px}
-.lead-body{padding:28px 32px 30px}
-.lead h1{font-family:var(--serif);font-weight:800;font-size:40px;line-height:1.08;
-  letter-spacing:-.01em;margin:0 0 16px}
-.lead h1 a{text-decoration:none}
-.deck{font-family:var(--serif);font-size:19px;line-height:1.58;color:#3a342a;margin:0 0 22px}
-.byline{display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted);
-  border-top:1px solid var(--hair);padding-top:16px}
-.src{background:#e6dcc2;color:#5c574d;font-weight:700;font-size:11px;padding:4px 9px;border-radius:4px}
-.rel{color:var(--green);font-weight:700}
-.read{margin-left:auto;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:12px;
-  text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:3px}
-
-/* category sections — colored card grid */
-.section{margin:0 0 38px}
-.section>h2{font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--ink);display:flex;align-items:center;gap:11px;margin:0 0 12px}
-.section>h2 .sq{width:13px;height:13px;background:var(--cat,#5C574D);flex:0 0 auto}
-.section>h2 .cnt{font-weight:700;font-size:12px;letter-spacing:0;text-transform:none;color:var(--faint)}
-.section>.crule{height:2px;background:var(--ink);opacity:.16;margin:0 0 18px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr));gap:20px}
-.card{background:var(--card);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--cat,#5C574D);
-  padding:15px 17px 16px;display:flex;flex-direction:column}
-.klabel{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.kcat{background:var(--cat,#5C574D);color:var(--catink,#fff);font-weight:800;font-size:9.5px;
-  letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:3px}
-.kr{color:var(--faint);font-weight:700;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
-.khed{font-family:var(--serif);font-weight:700;font-size:18px;line-height:1.24;margin:12px 0 0}
-.khed a{text-decoration:none}
-.kbrief{font-family:var(--serif);font-size:13.5px;line-height:1.5;color:#5c574d;margin:8px 0 0}
-.kfoot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:14px}
-.ksrc{border:1px solid var(--hair);color:var(--muted);font-weight:700;font-size:9.5px;letter-spacing:.06em;
-  text-transform:uppercase;padding:5px 8px;border-radius:4px}
-.kopen{font-weight:800;font-size:10px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
-  border-bottom:2px solid var(--gold);padding-bottom:3px;white-space:nowrap}
-.recordings .khed{font-weight:600;font-size:16px}
-
-/* ── sidebar ──────────────────────────────────────────────── */
-.side{display:flex;flex-direction:column;gap:30px}
-.box-label{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px}
-.ledger{background:var(--gold);color:var(--navy);box-shadow:9px 9px 0 var(--navy);
-  border-radius:5px;padding:18px 20px}
-.ledger .box-label{color:#3f2c05}
-.ledger ul{list-style:none;margin:0;padding:0}
-.ledger li{display:flex;align-items:center;gap:12px;padding:6px 0}
-.ledger li+li{border-top:1px solid rgba(16,42,84,.16)}
-.ledger .what{font-family:var(--serif);font-weight:600;font-size:18px;flex:1;line-height:1.25}
-.ledger .when{flex:0 0 auto;background:var(--red);color:#fff;font-weight:800;font-size:11px;
-  letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:5px;white-space:nowrap}
-.thisweek{background:var(--navy);color:#eef1f7;border:2px solid var(--gold);
-  box-shadow:9px 9px 0 var(--gold);border-radius:5px;padding:18px 20px}
+/* ── above-the-fold band ──────────────────────────────────── */
+.band{background:var(--band);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -22px 30px -26px rgba(16,42,84,.35)}
+.band .in{padding-top:26px;padding-bottom:36px}
+.hero{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+.marq-col{flex:2 1 380px;display:flex;flex-direction:column;gap:13px}
+.marq{position:relative;overflow:hidden;text-decoration:none;display:block;background:var(--navy);
+  border-radius:5px;border:1.5px solid var(--line);box-shadow:7px 7px 0 var(--gold);padding:clamp(22px,3.4vw,40px)}
+.marq .tags{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.marq .we{font-weight:800;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.marq .dot{width:5px;height:5px;border-radius:50%;background:#3b5489}
+.marq .wk{font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#aeb9cf}
+.marq h1{font-family:var(--serif);font-weight:600;font-size:clamp(27px,3.9vw,42px);line-height:1.07;
+  letter-spacing:-.015em;color:#fff;margin:14px 0 0;max-width:20ch}
+.marq .dek{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.7vw,19px);line-height:1.5;
+  color:#cdd6e6;margin:13px 0 0;max-width:52ch}
+.marq .cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:22px}
+.marq .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:#15120c;background:var(--gold);border-radius:6px;padding:12px 17px}
+.marq .stat{font-weight:600;font-size:11px;line-height:1.4;color:#8d99b3}
+.past{align-self:flex-start;text-decoration:none;font-weight:800;font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:#15120c;border-bottom:2px solid var(--gold);padding-bottom:2px}
+.side{flex:1 1 280px;display:flex;flex-direction:column;gap:14px}
+.box-label{font-weight:800;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.ledger{background:var(--gold);border-radius:5px;padding:18px 20px;border:1.5px solid var(--line);
+  box-shadow:5px 5px 0 var(--navy)}
+.ledger .box-label{color:var(--gold-ink)}
+.ledger ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.ledger li{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ledger .what{font-family:var(--serif);font-size:16px;line-height:1.25;color:#15120c}
+.ledger .when{white-space:nowrap;font-weight:800;font-size:11px;color:#fff;background:var(--red);
+  padding:5px 9px;border-radius:6px}
+.thisweek{background:var(--navy);border-radius:5px;padding:18px 20px;color:#fff;border:1.5px solid var(--line);
+  box-shadow:5px 5px 0 var(--gold)}
 .thisweek .box-label{color:var(--gold)}
-.thisweek ul{list-style:none;margin:0;padding:0}
-.thisweek li{display:flex;gap:16px;padding:8px 0;align-items:baseline}
-.thisweek li+li{border-top:1px solid rgba(244,180,26,.16)}
-.thisweek .dt{flex:0 0 52px;color:var(--gold);font-weight:700;font-size:13px}
-.thisweek .nm{font-family:var(--serif);font-size:17px;line-height:1.25}
-.thisweek .nm.lead-meet{font-weight:700}
+.thisweek ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:11px}
+.thisweek li{display:flex;gap:12px;align-items:baseline}
+.thisweek li.lead-row{padding-top:10px;border-top:1px solid rgba(255,255,255,.14)}
+.thisweek .dt{font-weight:700;font-size:12px;color:var(--gold);min-width:46px}
+.thisweek .nm{font-family:var(--serif);font-size:14.5px;color:#eef1f7}
+.thisweek li.lead-row .nm{font-weight:600;color:#fff}
 .thisweek .empty{color:#aeb9cf;font-size:13px}
 
-.foot{max-width:1200px;margin:0 auto;padding:0 30px 50px}
-.foot .ft{border-top:2px solid var(--ink);padding-top:14px;font-size:12px;color:var(--muted);
-  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+/* ── main ─────────────────────────────────────────────────── */
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px) 50px}
+.filter{margin-top:42px;padding:13px 15px;background:var(--card);border:1.5px solid var(--line);
+  border-radius:5px;box-shadow:4px 4px 0 var(--navy);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.filter .fl{font-weight:800;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#9a8c66;margin-right:3px}
+.chip{cursor:pointer;font-weight:700;font-size:11px;letter-spacing:.04em;padding:8px 14px;border-radius:4px;
+  border:1.5px solid #d8cdb2;background:var(--card);color:#4a4334}
+.chip.on{background:var(--gold);color:#15120c;border-color:var(--line)}
+
+.section{margin-top:38px}
+.section:first-of-type{margin-top:22px}
+.section>h2{display:flex;align-items:center;gap:12px;margin:0}
+.section>h2 .sq{width:11px;height:11px;border-radius:2px;background:var(--cat,#5C574D);flex:0 0 auto}
+.section>h2 .ttl{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#15120c}
+.section>h2 .cnt{font-weight:600;font-size:12px;color:var(--faint)}
+.section>h2 .rule{flex:1;height:1px;background:#ddd6c7}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:16px}
+.card{background:var(--card);border-radius:4px;border:1.5px solid var(--line);padding:15px 16px;
+  display:flex;flex-direction:column;box-shadow:5px 5px 0 var(--cat,#5C574D)}
+.card.pick{box-shadow:5px 5px 0 var(--gold)}
+.klabel{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:9px}
+.kl-left{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.kcat{font-weight:800;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--catink,#fbf7ec);
+  background:var(--cat,#5C574D);padding:4px 7px 3px;border-radius:3px}
+.pickbadge{font-weight:800;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink);
+  background:var(--gold);padding:4px 7px 3px;border-radius:3px}
+.kr{font-weight:700;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.khed{font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.2;color:#15120c;margin:0}
+.khed a{text-decoration:none}
+.kbrief{font-size:13px;line-height:1.5;color:#5c574d;margin:7px 0 0}
+.kfoot{display:flex;align-items:center;gap:8px;margin-top:14px}
+.ksrc{font-weight:700;font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:#4a4334;
+  border:1px solid var(--hair);border-radius:3px;padding:4px 8px}
+.kopen{margin-left:auto;font-weight:800;font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  text-decoration:none;color:#15120c;border-bottom:2px solid var(--gold);padding-bottom:1px;white-space:nowrap}
+
+/* ── footer ───────────────────────────────────────────────── */
+.foot{margin-top:44px;background:var(--navy);border-radius:5px;padding:24px clamp(18px,3vw,30px);
+  color:#cdd6e6;border:1.5px solid var(--line);box-shadow:6px 6px 0 var(--gold-deep)}
+.foot .row{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.foot .wm{font-family:var(--display);font-size:22px;color:#fff}
+.foot .tl{font-weight:700;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#d6bd6a;margin-top:7px}
+.foot .blurb{font-size:13px;line-height:1.5;margin-top:10px;max-width:440px}
+.foot .count{font-weight:800;font-size:26px;color:var(--gold);text-align:right}
+.foot .clab{font-weight:600;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#aeb9cf;margin-top:4px;text-align:right}
+.foot .gen{margin-top:10px;font-size:11px;color:#7c89a3}
 
 /* ── hover / motion ───────────────────────────────────────── */
-.card,.nav a,.khed a,.lead h1 a,.read,.lead{
-  transition:transform .16s ease,box-shadow .16s ease,color .15s ease,
-    background .15s ease,border-color .15s ease}
-.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--cat,#102A54)}
-.lead:hover{box-shadow:14px 14px 0 var(--navy)}
-.nav a:hover{background:rgba(244,180,26,.16);border-color:var(--gold);color:#fff}
-.khed a:hover,.lead h1 a:hover{color:var(--gold-deep)}
-.read:hover{border-bottom-color:var(--ink);color:var(--ink)}
+.card,.marq,.khed a,.kopen,.cd,.past{transition:transform .13s ease,box-shadow .13s ease,color .15s ease}
+.card:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--cat,#102A54)}
+.card.pick:hover{box-shadow:8px 8px 0 var(--gold)}
+.marq:hover{transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--gold)}
+.khed a:hover{color:var(--gold-deep)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 """
-
-_MARK = ('<svg class="mark" width="42" height="42" viewBox="0 0 100 100" '
-         'xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="#F4B41A">'
-         '<ellipse cx="26" cy="46" rx="9.5" ry="13" transform="rotate(-22 26 46)"/>'
-         '<ellipse cx="44" cy="34" rx="10" ry="14"/>'
-         '<ellipse cx="62" cy="34" rx="10" ry="14"/>'
-         '<ellipse cx="80" cy="46" rx="9.5" ry="13" transform="rotate(22 80 46)"/>'
-         '<path d="M53 54c-15 0-27 11-27 25 0 10 8 16 18 15 6-1 7-3 11-3s5 2 11 3'
-         'c10 1 18-5 18-15 0-14-12-25-27-25z"/></g></svg>')
 
 
 def _esc(s: str) -> str:
@@ -293,45 +290,63 @@ def _next_meeting(upcoming: list[Item], today: date):
 
 # ── piece renderers ───────────────────────────────────────────
 
-def _lead_html(it: Item) -> str:
-    cat = _CAT_LABELS.get(it.category, it.category).upper()
-    title = _esc(it.title)
-    head = f'<a href="{_esc(it.url)}">{title}</a>' if it.url else title
-    deck = f'<p class="deck">{_esc(it.summary)}</p>' if it.summary else ""
-    read = f'<a class="read" href="{_esc(it.url)}">Read the source →</a>' if it.url else ""
-    return (f'<article class="lead">'
-            f'<div class="lead-img"><span class="pill">Today\'s lead · {_esc(cat)}</span></div>'
-            f'<div class="lead-body"><h1>{head}</h1>{deck}'
-            f'<div class="byline"><span class="src">{_esc(it.source_name)}</span>'
-            f'{read}</div></div></article>')
+def _marquee_html(edition: dict | None, rollup_text: str, daily_stats: dict) -> str:
+    if edition:
+        wk = f"The Week in Littleton · {_esc(edition['range_label'])}"
+        head = _esc(edition["headline"])
+        dek = _esc(edition.get("dek", ""))
+        st = edition.get("stats", daily_stats)
+        cta = '<span class="btn">Read the full editorial <span>→</span></span>'
+        href, past = "week.html", '<a class="past" href="past-editions.html">Browse all past editions →</a>'
+    else:
+        wk, head = "Today's briefing", "This week in Littleton"
+        dek = _esc((rollup_text or "")[:240])
+        st, cta, href, past = daily_stats, "", "#filterbar", ""
+    stat = (f'{st.get("items", 0)} items · {st.get("meetings", 0)} meetings · '
+            f'{st.get("sources", 0)} sources')
+    dek_html = f'<p class="dek">{dek}</p>' if dek else ""
+    return (f'<div class="marq-col"><a class="marq" href="{href}">'
+            f'<div class="tags"><span class="we">Weekly Edition</span>'
+            f'<span class="dot"></span><span class="wk">{wk}</span></div>'
+            f'<h1>{head}</h1>{dek_html}'
+            f'<div class="cta">{cta}<span class="stat">{stat}</span></div></a>{past}</div>')
 
 
-def _card_html(it: Item, today: date) -> str:
+def _card_html(it: Item, today: date, pick: bool = False) -> str:
     title = _esc(it.title)
     hed = f'<a href="{_esc(it.url)}">{title}</a>' if it.url else title
     brief = f'<p class="kbrief">{_esc(it.summary)}</p>' if it.summary else ""
-    klabel = _esc(_CAT_LABELS.get(it.category, it.category).upper())
+    klabel = _esc(_CAT_LABELS.get(it.category, it.category))
     when = (_esc(_rel_date(it.event_date, today).capitalize())
             if it.event_date and it.event_date >= today else "")
     kr = f'<span class="kr">{when}</span>' if when else ""
     accent = _CAT_ACCENT.get(it.category, "#5C574D")
-    catink = _CAT_INK.get(it.category, "#FFFFFF")
+    badge = '<span class="pickbadge">★ Editor\'s pick</span>' if pick else ""
     opn = f'<a class="kopen" href="{_esc(it.url)}">Open →</a>' if it.url else ""
-    foot = (f'<div class="kfoot"><span class="ksrc">{_esc(_short_src(it.source_name))}</span>'
-            f'{opn}</div>')
-    return (f'<article class="card" style="--cat:{accent};--catink:{catink}">'
-            f'<div class="klabel"><span class="kcat">{klabel}</span>{kr}</div>'
-            f'<h3 class="khed">{hed}</h3>{brief}{foot}</article>')
+    return (f'<article class="{"card pick" if pick else "card"}" style="--cat:{accent}">'
+            f'<div class="klabel"><span class="kl-left"><span class="kcat">{klabel}</span>'
+            f'{badge}</span>{kr}</div>'
+            f'<h3 class="khed">{hed}</h3>{brief}'
+            f'<div class="kfoot"><span class="ksrc">{_esc(_short_src(it.source_name))}</span>'
+            f'{opn}</div></article>')
 
 
-def _section_html(cat: str, items: list[Item], today: date) -> str:
-    cards = "".join(_card_html(it, today) for it in items)
+def _section_html(cat: str, items: list[Item], today: date, picks: set[int]) -> str:
+    cards = "".join(_card_html(it, today, id(it) in picks) for it in items)
     accent = _CAT_ACCENT.get(cat, "#5C574D")
     n = len(items)
-    return (f'<section class="section" id="cat-{cat}" style="--cat:{accent}">'
-            f'<h2><span class="sq"></span>{_esc(_CAT_LABELS.get(cat, cat))}'
-            f'<span class="cnt">{n} update{"s" if n != 1 else ""}</span></h2>'
-            f'<div class="crule"></div><div class="cards">{cards}</div></section>')
+    return (f'<section class="section" id="cat-{cat}" data-cat="{cat}" style="--cat:{accent}">'
+            f'<h2><span class="sq"></span><span class="ttl">{_esc(_CAT_LABELS.get(cat, cat))}</span>'
+            f'<span class="cnt">{n} update{"s" if n != 1 else ""}</span>'
+            f'<span class="rule"></span></h2>'
+            f'<div class="cards">{cards}</div></section>')
+
+
+def _filter_html(present: list[str]) -> str:
+    chips = ['<button class="chip on" data-chip data-cat="all">All</button>']
+    chips += [f'<button class="chip" data-chip data-cat="{c}">{_esc(_CAT_LABELS.get(c, c))}</button>'
+              for c in present]
+    return (f'<div class="filter" id="filterbar"><span class="fl">Filter</span>{"".join(chips)}</div>')
 
 
 def _ledger_html(items: list[Item], today: date) -> str:
@@ -376,14 +391,34 @@ def _thisweek_html(items: list[Item], today: date) -> str:
     else:
         lis = []
         for d, kind, label in rows:
-            cls = "nm lead-meet" if kind == "deadline" else "nm"
-            lis.append(f'<li><span class="dt">{d.strftime("%b %-d")}</span>'
-                       f'<span class="{cls}">{_esc(label)}</span></li>')
+            lead = "town meeting" in label.lower()
+            lis.append(f'<li class="{"lead-row" if lead else ""}">'
+                       f'<span class="dt">{d.strftime("%b %-d")}</span>'
+                       f'<span class="nm">{_esc(label)}</span></li>')
         inner = "".join(lis)
-    return f'<div class="thisweek"><div class="box-label">This week in town</div><ul>{inner}</ul></div>'
+    return (f'<div class="thisweek" id="nextmeeting">'
+            f'<div class="box-label">This week in town</div><ul>{inner}</ul></div>')
 
 
-def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
+_FILTER_JS = """
+(function(){
+  var chips=[].slice.call(document.querySelectorAll('[data-chip]'));
+  var secs=[].slice.call(document.querySelectorAll('main section[data-cat]'));
+  function set(cat){
+    secs.forEach(function(s){
+      s.style.display=(cat==='all'||s.getAttribute('data-cat')===cat)?'':'none';
+    });
+    chips.forEach(function(c){c.className='chip'+(c.getAttribute('data-cat')===cat?' on':'');});
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){set(c.getAttribute('data-cat'));});
+  });
+})();
+"""
+
+
+def build_html(items: list[Item], rollup_text: str, health: dict,
+               edition: dict | None = None) -> str:
     today = _today_ny()
 
     unhealthy = [s for s, info in health.get("sources", {}).items()
@@ -397,47 +432,44 @@ def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
         log.info("partition: archived %d stale dated meeting/event item(s)", len(dropped))
 
     main_items = sorted(upcoming + undated, key=lambda x: x.relevance, reverse=True)
-    lead = main_items[0] if main_items else None
-    rest = main_items[1:] if main_items else []
+    picks = {id(it) for it in main_items[:3]}  # Editor's picks — top 3 overall
 
     by_cat: dict[str, list[Item]] = {}
-    for it in rest:
+    for it in main_items:
         by_cat.setdefault(it.category, []).append(it)
     present = [c for c in _CAT_ORDER if by_cat.get(c)]
-    sections = "".join(_section_html(c, by_cat[c], today) for c in present)
+    sections = "".join(_section_html(c, by_cat[c], today, picks) for c in present)
 
     recordings = ""
     if past_lctv:
         past_lctv.sort(key=lambda x: x.event_date or today, reverse=True)
         rows = "".join(_card_html(it, today) for it in past_lctv)
         n = len(past_lctv)
-        recordings = ('<section class="section recordings" style="--cat:#5C574D">'
-                      '<h2><span class="sq"></span>Recent meetings — watch the recording'
-                      f'<span class="cnt">{n} recording{"s" if n != 1 else ""}</span></h2>'
-                      f'<div class="crule"></div><div class="cards">{rows}</div></section>')
+        recordings = ('<section class="section" data-cat="recordings" style="--cat:#5C574D">'
+                      '<h2><span class="sq"></span><span class="ttl">Recent meetings — recordings</span>'
+                      f'<span class="cnt">{n} recording{"s" if n != 1 else ""}</span>'
+                      f'<span class="rule"></span></h2><div class="cards">{rows}</div></section>')
+
+    rendered = main_items + past_lctv
+    daily_stats = {
+        "items": len(rendered),
+        "meetings": sum(1 for it in rendered if it.item_type in {"meeting", "hearing", "event", "agenda"}),
+        "sources": len({it.source_name for it in rendered}),
+    }
 
     nm = _next_meeting(upcoming, today)
     badge = ""
     if nm:
-        d, it = nm
-        days = (d - today).days
-        if days == 0:
-            n_html = '<span class="n" style="font-size:22px">Today</span>'
-        elif days == 1:
-            n_html = '<span class="n">1<small>Day</small></span>'
-        else:
-            n_html = f'<span class="n">{days}<small>Days</small></span>'
-        badge = (f'<div class="badge">{n_html}'
-                 f'<span class="lab">Next meeting<b>{d.strftime("%a, %b %-d")}</b></span></div>')
+        d, _it = nm
+        days = max(0, (d - today).days)
+        badge = (f'<a class="cd" href="#nextmeeting">'
+                 f'<div><div class="d">{days}</div><div class="u">days</div></div>'
+                 f'<div class="l"><div class="t">Next meeting</div>'
+                 f'<div class="w">{d.strftime("%a, %b %-d")}</div></div></a>')
 
-    nav = ['<a class="on" href="#top">All</a>']
-    nav += [f'<a href="#cat-{c}">{_esc(_CAT_LABELS.get(c, c))}</a>' for c in present]
-    nav_html = "".join(nav)
-
-    eyebrow = f'{today.strftime("%A · %B %-d, %Y").upper()} · 01460'
-    shown = len(main_items) + len(past_lctv)
-    lead_block = (_lead_html(lead) if lead else
-                  '<p style="color:var(--muted)">No current items today — check back tomorrow.</p>')
+    eyebrow = today.strftime("%A · %B %-d, %Y · 01460")
+    main_block = (sections + recordings if (sections or recordings) else
+                  '<p style="margin-top:42px;color:var(--muted)">No current items today — check back tomorrow.</p>')
 
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -447,32 +479,42 @@ def build_html(items: list[Item], rollup_text: str, health: dict) -> str:
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{_FONTS}" rel="stylesheet">
 <style>{_CSS}</style></head>
-<body><a id="top"></a>
+<body>
 <header class="mast"><div class="in">
-  <div class="eyebrow">{_esc(eyebrow)}</div>
-  <div class="mast-row">
-    <div class="brand"><div><div class="wordmark">Littleton Signal</div>
-      <div class="tagline">Home of the Tigers</div></div></div>
-    {badge}
-  </div></div>
-  <div class="navband"><div class="in"><nav class="nav">{nav_html}</nav></div></div>
-</header>
+  <div class="brand"><div class="kicker">{_esc(eyebrow)}</div>
+    <div class="wordmark">Littleton Signal</div>
+    <div class="tagline">Home of the Tigers</div></div>
+  {badge}
+</div></header>
+<div class="torn"></div>
+<section class="band"><div class="in"><div class="hero">
+  {_marquee_html(edition, rollup_text, daily_stats)}
+  <div class="side">{_ledger_html(upcoming, today)}{_thisweek_html(upcoming, today)}</div>
+</div></div></section>
 <div class="torn"></div>
 <main class="wrap">
-  <div class="grid">
-    <div class="main">{lead_block}</div>
-    <aside class="side">{_ledger_html(upcoming, today)}{_thisweek_html(upcoming, today)}</aside>
-  </div>
-  {sections}{recordings}
+  {_filter_html(present)}
+  {main_block}
+  <footer class="foot">
+    <div class="row">
+      <div><div class="wm">Littleton Signal</div>
+        <div class="tl">Home of the Tigers · Littleton, MA</div>
+        <div class="blurb">An unofficial, community-run daily briefing. Gathered each morning from
+          the town website, LCTV, the schools, local news, and the Conservation Trust —
+          deduped and summarized in plain language.</div></div>
+      <div><div class="count">{daily_stats['items']}</div>
+        <div class="clab">items today · {daily_stats['sources']} sources</div></div>
+    </div>
+    <div class="gen">Generated {today.strftime('%Y-%m-%d')} · Updates every morning · Not affiliated with the Town of Littleton.</div>
+  </footer>
 </main>
-<footer class="foot"><div class="ft"><span>{shown} item(s) on today's page</span>
-  <span>Updated {today.strftime('%B %-d, %Y')}</span></div></footer>
+<script>{_FILTER_JS}</script>
 </body></html>"""
 
 
 def write(items: list[Item], rollup_text: str, health: dict,
-          docs_dir: Path, archive_dir: Path) -> Path:
-    html_doc = build_html(items, rollup_text, health)
+          docs_dir: Path, archive_dir: Path, edition: dict | None = None) -> Path:
+    html_doc = build_html(items, rollup_text, health, edition)
     docs_dir.mkdir(parents=True, exist_ok=True)
     archive_dir.mkdir(parents=True, exist_ok=True)
     today = _today_ny().strftime("%Y-%m-%d")
