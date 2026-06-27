@@ -16,6 +16,11 @@ from .base import Item, clean_text
 
 log = logging.getLogger("adapters.rss")
 
+# Substack serves bot/datacenter IPs an empty challenge page for the descriptive
+# UA; a browser-like UA gets the public feed through. Scoped to substack.com only.
+_BROWSER_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+               "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+
 
 def _parse_date(entry) -> datetime | None:
     for key in ("published_parsed", "updated_parsed"):
@@ -34,7 +39,7 @@ def fetch(source: dict, user_agent: str, timeout: int = 20) -> list[Item]:
         log.info("skipping %s: feed url not configured", source["id"])
         return []
 
-    feedparser.USER_AGENT = user_agent
+    feedparser.USER_AGENT = _BROWSER_UA if "substack.com" in url else user_agent
     try:
         parsed = feedparser.parse(url)
     except Exception as exc:  # noqa: BLE001
