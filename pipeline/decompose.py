@@ -88,6 +88,12 @@ def decompose(items: list[Item], *, model: str, api_key: str) -> list[Item]:
     if not api_key:
         return items
     now = datetime.now(timezone.utc)
+    # Diagnostic: body sizes of recap-source items. Full posts (content:encoded) are
+    # thousands of chars; if CI sees only ~50-80, the runner is getting truncated feeds.
+    recaps = [it for it in items if it.source_id in _RECAP_SOURCES]
+    if recaps:
+        log.info("recap diagnostic: %d recap-source item(s); body sizes (top): %s",
+                 len(recaps), sorted((len(it.body or "") for it in recaps), reverse=True)[:8])
     out: list[Item] = []
     for it in items:
         if not _is_recap(it):
