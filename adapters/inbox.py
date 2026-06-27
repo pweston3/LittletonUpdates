@@ -52,7 +52,15 @@ def fetch(source: dict, cfg, timeout: int = 20) -> list[Item]:
         log.info("inbox disabled (no IMAP creds); skipping %s", source["id"])
         return []
 
-    from_contains = [s.lower() for s in source.get("params", {}).get("from_contains", [])]
+    params = source.get("params", {})
+    from_contains = [s.lower() for s in params.get("from_contains", [])]
+    # Mail from these senders is re-tagged as a recap source (e.g. Sean's Substack,
+    # which blocks cloud-IP RSS fetches but arrives fine by email) so the decompose
+    # step picks it up and it keeps its own source identity instead of "inbox".
+    recap_senders = [s.lower() for s in params.get("recap_senders", [])]
+    recap_id = params.get("recap_source_id")
+    recap_name = params.get("recap_source_name", recap_id)
+    recap_url = params.get("recap_source_url", "")
     items: list[Item] = []
     try:
         conn = imaplib.IMAP4_SSL(cfg.IMAP_HOST, timeout=timeout)
@@ -76,12 +84,13 @@ def fetch(source: dict, cfg, timeout: int = 20) -> list[Item]:
                 published = parsedate_to_datetime(msg.get("Date"))
             except Exception:
                 published = None
+            is_recap = bool(recap_id) and any(r in sender for r in recap_senders)
             items.append(
                 Item(
-                    source_id=source["id"],
-                    source_name=source["name"],
+                    source_id=recap_id if is_recap else source["id"],
+                    source_name=recap_name if is_recap else source["name"],
                     tier=source.get("tier", 1),
-                    url="",  # email has no canonical URL; left blank
+                    url=recap_url if is_recap else "",  # email has no canonical URL
                     title=clean_text(subject, 400) or "(no subject)",
                     body=clean_text(_body_text(msg)),
                     published=published,

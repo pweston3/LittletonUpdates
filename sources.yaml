@@ -77,6 +77,17 @@ sources:
         - littletonma.org
         - civicplus.com
         - civicready.com
+        - substack.com
+      # Sean's "Sean for Littleton" Substack blocks cloud-IP (GitHub runner) RSS
+      # fetches with a challenge page, so his recaps arrive by email instead:
+      # subscribe this mailbox to his Substack, and mail from substack.com is
+      # re-tagged as the sean_for_littleton recap source, which the decompose step
+      # splits into per-topic cards.
+      recap_senders:
+        - substack.com
+      recap_source_id: sean_for_littleton
+      recap_source_name: "Sean Aherne — Sean for Littleton (School Committee recaps)"
+      recap_source_url: "https://seanpaherne.substack.com"
 
   # RSS backbone — the town's CivicPlus "All" rollup feeds (catalogued at
   # littletonma.org/rss.aspx). Verified to return XML with our User-Agent. The inbox
@@ -152,11 +163,15 @@ sources:
     name: Sean Aherne — Sean for Littleton (School Committee recaps)
     tier: 3
     kind: rss
-    enabled: true
+    # DISABLED: Substack serves GitHub-runner (cloud) IPs an empty challenge page, so
+    # this feed returns nothing in CI (confirmed in the workflow logs). His recaps now
+    # arrive via the inbox route instead — see town_notify_inbox's recap_senders, which
+    # re-tags substack.com email as this source so decompose still splits it into cards.
+    # Re-enable for local runs from a residential IP if you want the RSS path too
+    # (dedupe collapses any overlap with the email copy).
+    enabled: false
     weight: 8
     category: schools
-    # seanforlittleton.com is a Squarespace landing page; the actual Substack lives
-    # at the seanpaherne subdomain (linked from that page). Feed = <subdomain>/feed.
     url: "https://seanpaherne.substack.com/feed"
 
   # ── Tier 5 — Local news & aggregators ──────────────────────────────────────
