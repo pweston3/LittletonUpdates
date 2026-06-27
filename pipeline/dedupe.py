@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -48,12 +49,18 @@ def dedupe_within(items: list[Item]) -> list[Item]:
     on today's page if it's still current; the seen-store is only for the email's
     "what's new" (see select_new)."""
     out: list[Item] = []
-    batch: set[str] = set()
+    hashes: set[str] = set()
+    titles: set[str] = set()
     for it in items:
         h = it.compute_hash()
-        if h in batch:
+        # Title key catches the same meeting arriving from calendar + agenda + inbox
+        # with identical titles but different bodies (which the content hash misses).
+        tkey = re.sub(r"\s+", " ", it.title or "").strip().lower()
+        if h in hashes or (tkey and tkey in titles):
             continue
-        batch.add(h)
+        hashes.add(h)
+        if tkey:
+            titles.add(tkey)
         out.append(it)
     log.info("dedupe(within-run): %d in -> %d unique", len(items), len(out))
     return out
