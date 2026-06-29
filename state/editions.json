@@ -49,5 +49,57 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W27",
+  "date": "2026-06-29",
+  "range_label": "Jun 29 \u2013 Jul 5, 2026",
+  "headline": "A New School Takes Shape as Summer Civic Work Begins",
+  "dek": "*Littleton heads into the holiday week with a once-in-a-generation school project gaining momentum and a full slate of boards quietly keeping the town's gears turning.*",
+  "lede": "After more than six decades, Littleton's elementary school building is finally on a clear path toward replacement. The Massachusetts School Building Authority has approved the project budget for the new Shaker Lane School, a milestone that transforms years of planning meetings and community conversations into something more concrete: a funded construction project. That approval lands at a moment when the town has already invested months in public engagement, including a community forum where residents shared ideas for weaving Littleton's own identity into the building's design. It is the kind of generational decision that touches nearly every family in town, and the machinery behind it has been running steadily all spring.",
+  "sections": [
+   {
+    "kicker": "Building a School",
+    "body": "The Shaker Lane School Building Committee has met repeatedly since the spring \u2014 in April, May, and June \u2014 working through the details of a project that will replace a 64-year-old building. With the MSBA now having signed off on the budget, the committee's work shifts from justifying the project to executing it. Alongside that body, the full School Committee has also been active, holding regular meetings through the spring and convening a special session on June 25th, suggesting that school governance questions are running in parallel with the construction process.\n\nThe May community forum was a notable moment in that arc. Inviting residents to weigh in on how the new building should reflect Littleton's character signals that this is not just a facilities project \u2014 it is a civic one. What comes out of those conversations will eventually show up in stone, glass, and classroom walls.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Town Hall in Motion",
+    "body": "While the school project commands the most public attention, Littleton's governing boards have been equally busy. The Select Board held its regular June 22nd meeting and this week heads into a two-part day on June 30th: a retreat at the Fire Station in the morning, followed by a formal meeting at Town Hall in the afternoon. That combination \u2014 informal strategic discussion paired with official business \u2014 suggests the board is doing some longer-range thinking as the fiscal year turns.\n\nThe Finance Committee, which met jointly with the Select Board as recently as June 8th, has its next meeting scheduled for July 9th. With a major capital project now budgeted and approved at the state level, the local financial picture will bear watching as the town works out how its share of the school costs fits into the broader fiscal plan.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Planning and Land",
+    "body": "The Planning Board closed out June with a meeting on the 25th, following a retreat earlier in the month that hinted at some internal goal-setting underway. The board has met regularly since April, and its steady cadence reflects a town that continues to field development questions even as attention focuses on the school project. The Select Board's joint meeting with the Housing Authority back in May is another thread worth keeping in mind \u2014 housing availability and land use decisions rarely stay separate from school enrollment projections for long.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Lakes and Land",
+    "body": "The Clean Lakes Committee and the Conservation Commission both met on June 25th, and the Conservation Commission had also gathered just two days earlier. Summer is prime season for questions about Littleton's lakes and wetlands, and the overlap of those two bodies in the same week points to an active environmental calendar. Residents who recreate on the town's water or live near its wetland edges have reason to follow what these committees are working through in the weeks ahead.",
+    "color": "#2C5BA6"
+   }
+  ],
+  "pull_quote": "A 64-year-old building is finally on a clear path toward replacement \u2014 and the community is being asked what the new one should say about Littleton.",
+  "threads": [
+   "Watch the Select Board's June 30th retreat for signals about the board's priorities heading into the second half of 2026.",
+   "The Finance Committee meets July 9th \u2014 its agenda may shed light on how the town's share of the Shaker Lane School budget fits into local finances.",
+   "The Conservation Commission and Clean Lakes Committee are both active as summer water season peaks; lake-related decisions could surface quickly."
+  ],
+  "stats": {
+   "items": 141,
+   "meetings": 4,
+   "sources": 9,
+   "deadlines": 0
+  },
+  "sources": [
+   "Town of Littleton",
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
