@@ -1,59 +1,59 @@
 {
   "sources": {
     "town_notify_inbox": {
-      "zero_runs": 1,
+      "zero_runs": 2,
       "last_yield": "2026-07-03T13:00:17.408113+00:00"
     },
     "lps_district_news": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.418988+00:00"
+      "last_yield": "2026-07-05T12:20:51.210978+00:00"
     },
     "sean_for_littleton": {
       "zero_runs": 7,
       "last_yield": "2026-06-26T20:38:04.082843+00:00"
     },
     "patch_littleton": {
-      "zero_runs": 22
+      "zero_runs": 23
     },
     "lctv_youtube": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.418996+00:00"
+      "last_yield": "2026-07-05T12:20:51.210987+00:00"
     },
     "reddit_sitewide": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.419013+00:00"
+      "last_yield": "2026-07-05T12:20:51.210991+00:00"
     },
     "reddit_massachusetts": {
-      "zero_runs": 22
+      "zero_runs": 23
     },
     "conservation_trust": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.419017+00:00"
+      "last_yield": "2026-07-05T12:20:51.210996+00:00"
     },
     "lps_official_news": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.418992+00:00"
+      "last_yield": "2026-07-05T12:20:51.210982+00:00"
     },
     "lelwd": {
-      "zero_runs": 1,
-      "last_yield": "2026-07-03T13:00:17.408194+00:00"
+      "zero_runs": 0,
+      "last_yield": "2026-07-05T12:20:51.211000+00:00"
     },
     "town_calendar": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.418965+00:00"
+      "last_yield": "2026-07-05T12:20:51.210954+00:00"
     },
     "town_agendas": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.418979+00:00"
+      "last_yield": "2026-07-05T12:20:51.210967+00:00"
     },
     "town_newsflash": {
       "zero_runs": 0,
-      "last_yield": "2026-07-04T12:10:05.418984+00:00"
+      "last_yield": "2026-07-05T12:20:51.210972+00:00"
     },
     "town_alerts": {
-      "zero_runs": 13
+      "zero_runs": 14
     }
   },
   "alert_runs": 3,
-  "last_run": "2026-07-04T12:10:05.419021+00:00"
+  "last_run": "2026-07-05T12:20:51.211004+00:00"
 }
