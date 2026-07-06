@@ -106,5 +106,60 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W28",
+  "date": "2026-07-06",
+  "range_label": "July 6\u201312, 2026",
+  "headline": "A New School, New Trails, and a King Street Corridor Taking Shape",
+  "dek": "*From a state-approved school budget to conservation hearings on both ends of King Street, Littleton is quietly making decisions this summer that will define the town for decades.*",
+  "lede": "The biggest story in Littleton right now is one that's been building for years: the town is finally moving in earnest to replace Shaker Lane School, a building that has been standing for 64 years. The Massachusetts School Building Authority approved the project budget, giving the effort a critical green light, and the Building Committee has been meeting regularly to advance the work. Residents got a chance earlier this spring to weigh in on how Littleton's identity should be woven into the new design, and that community voice will matter as the project moves into its next phases. For families with young children \u2014 and for taxpayers generally \u2014 this is the story to watch all summer.",
+  "sections": [
+   {
+    "kicker": "School on the Move",
+    "body": "With the MSBA's budget approval now in hand, the Shaker Lane School project has cleared one of its most consequential hurdles. The Building Committee has been holding regular meetings, and the broader community has already been invited into the conversation \u2014 a May forum asked residents to think about what makes Littleton, Littleton, and how that should be reflected in a building where the town's youngest students will spend their days. Replacing a 64-year-old school is not a small undertaking financially or logistically, and the road from approved budget to groundbreaking is long. But the direction is set, and momentum is real.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "King Street in Play",
+    "body": "While the school story dominates the headlines, a quieter but equally consequential set of decisions is unfolding along King Street. The Planning Board this week held a public hearing on a stormwater management and site plan for 550 King Street \u2014 a retail development in its second phase \u2014 while the Conservation Commission has scheduled its own public hearings on both 550 King Street and 300 King Street, home to Castle in the Trees Park, for later this month. That the same corridor is generating simultaneous scrutiny from two different boards, for development and conservation purposes, speaks to the pressure this part of town is under. Residents who care about what King Street looks and feels like in ten years should pay close attention to both tracks.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Housing Front",
+    "body": "Affordable housing continues to move through Littleton's regulatory machinery. The Planning Board also heard a stormwater and site plan application this week for a proposed affordable senior housing project at 410 Great Road \u2014 a use that addresses one of the town's most persistent needs. The Affordable Housing Trust meets again next week, and the Zoning Board of Appeals has hearings scheduled for mid-July at two additional addresses. Taken together, these proceedings reflect a town working to grow carefully, even if the pace sometimes feels slow to those who need housing now.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Conservation's Busy Season",
+    "body": "Summer in Littleton is never quiet for the Conservation Commission, and this year is no exception. The commission met in early July and has a full slate of public hearings coming up, including one on Webster Woods Conservation Land. Meanwhile, the Clean Lakes Committee gathered in late June, and the Littleton Conservation Trust recently opened the Art Lazarus Trail at Long Lake Park Conservation Area \u2014 named for a volunteer who gave 33 years to local conservation work. The Trails Hiking Challenge is ongoing, and a free public talk at the Reuben Hoar Library will examine the harm that yard pesticides do to insects, monarch butterflies, and wildlife. Conservation in Littleton is not just a regulatory function; it is, increasingly, a community identity.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Town Hall Pulse",
+    "body": "The Select Board held a retreat and a regular meeting on June 30th and returns for another session on July 13th. The Finance Committee met this week as well. Residents who want to shape the longer arc of town decision-making can fill out the 2026 Annual Town Meeting feedback survey, which is still open. And for those who want to cast an early ballot in the state primary, in-person early voting is available before Election Day.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "The same corridor is generating simultaneous scrutiny from two different boards \u2014 for development and conservation purposes \u2014 at the same time.",
+  "threads": [
+   "Conservation Commission public hearings on Webster Woods, Castle in the Trees Park, and 550 King Street are all scheduled for July 21st \u2014 a single evening that could shape three very different parcels.",
+   "The Shaker Lane School Building Committee's next steps following the MSBA budget approval will signal how quickly the project can move toward design and, eventually, construction.",
+   "The Zoning Board of Appeals takes up hearings at 359 King Street and 27 Lake Warren Drive on July 16th \u2014 two more addresses to watch as the town's development pipeline fills."
+  ],
+  "stats": {
+   "items": 71,
+   "meetings": 7,
+   "sources": 7,
+   "deadlines": 3
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Littleton Conservation Trust"
+  ]
  }
 ]
