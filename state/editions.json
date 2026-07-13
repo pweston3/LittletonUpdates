@@ -163,5 +163,61 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W29",
+  "date": "2026-07-13",
+  "range_label": "July 13\u201319, 2026",
+  "headline": "Schools Shine, Sewers Flow, and King Street Keeps Moving",
+  "dek": "*A week of quiet milestones in Littleton \u2014 ribbons cut, ribbons earned, and big decisions still taking shape.*",
+  "lede": "There are weeks in a town's life when the long, unglamorous work of local government suddenly becomes visible all at once. This was one of them. Littleton's middle school earned a Blue Ribbon nomination and its high school drew state recognition for educational excellence \u2014 extraordinary news for a district that is simultaneously grappling with the question of what to do with a 64-year-old elementary school building that has simply run out of time. Add a brand-new sewer system serving Littleton Common, a freshly opened conservation trail, and a federal lawsuit over contaminated drinking water, and the picture that emerges is of a town investing heavily in its future while still reckoning with the costs of its past.",
+  "sections": [
+   {
+    "kicker": "Schools in the Spotlight",
+    "body": "The good news arrived first: Littleton Middle School has earned a Blue Ribbon nomination, and the high school has received separate state recognition as a top-performing school in Massachusetts. Those honors are a genuine source of community pride and a testament to years of work by teachers, students, and families.\n\nBut the celebration arrives alongside a sobering challenge. The Shaker Lane School Building Committee has been meeting to address the future of an elementary building that is now 64 years old. The committee met in June, and the work of charting a replacement path continues. The School Committee's negotiating subcommittee has also been active, a reminder that the people inside those aging walls \u2014 and the contracts that govern their work \u2014 are never far from the table.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Ribbons and Results",
+    "body": "Two infrastructure milestones arrived this week with little fanfare but real significance. The new Littleton Common Sewer System is fully operational after nearly two years of construction, a project that now serves a historic part of town that had long relied on older systems. The ribbon cutting marks the end of a construction chapter and the beginning of what planners hope is a more sustainable foundation for the Common area.\n\nOut on the conservation land at Long Lake Park, the Art Lazarus Trail officially opened to the public. Residents are invited to explore the new route \u2014 a quieter kind of ribbon cutting, but one that expands what Littleton residents can reach on foot.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "King Street Under Review",
+    "body": "Development pressure along King Street continues to move through the town's permitting boards. The Planning Board held public hearings on July 9th on a stormwater management and site plan application for a retail Phase II project at 550 King Street \u2014 covering both a north and south parcel. Separately, a site plan for affordable senior housing at 410 Great Road also came before the Planning Board the same evening, reflecting the dual pressures of commercial growth and housing need that are reshaping the Great Road corridor.\n\nThe Zoning Board of Appeals takes up two more King Street-area addresses this week \u2014 359 King Street and 27 Lake Warren Drive \u2014 with hearings scheduled for Thursday evening. And the Conservation Commission has two back-to-back public hearings on 550 King Street and nearby Castle in the Trees Park set for July 21st, meaning the same stretch of road will face scrutiny from multiple angles before the month is out.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Water, Money, and the Long View",
+    "body": "The Littleton Water Department has filed a federal lawsuit seeking to recover the costs it incurred removing PFAS \u2014 per- and polyfluoroalkyl substances \u2014 from the town's drinking water supply. The suit signals that Littleton intends to hold responsible parties accountable for contamination that has already cost the utility real money to remediate. It is a story worth watching as it works through the courts.\n\nOn the fiscal side, a new Massachusetts OPEB summary report shows Littleton continuing to make progress on its long-term other post-employment benefit obligations \u2014 the kind of steady, unsexy financial planning that rarely makes headlines but matters enormously to a town's long-term health. The Finance Committee and Select Board both met in the first part of the month, and the Affordable Housing Trust convenes Tuesday as the town keeps multiple financial and planning threads moving in parallel.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Housing on the Agenda",
+    "body": "The Select Board opened this week with a joint meeting with the Housing Authority on Monday evening \u2014 a pairing that signals the town is thinking about housing in a coordinated way, not just as a zoning question. The Affordable Housing Trust meets Tuesday, and the affordable senior housing proposal at 410 Great Road remains in active review. Littleton's housing pressures are not unique in the region, but the volume of board activity on the topic suggests the community is trying to get ahead of them.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "A town investing heavily in its future while still reckoning with the costs of its past.",
+  "threads": [
+   "Conservation Commission takes up Webster Woods, Castle in the Trees Park, and 550 King Street in a single evening on July 21st \u2014 watch for whether environmental review becomes a friction point for the King Street retail expansion.",
+   "The Shaker Lane School Building Committee's path to a replacement elementary school will eventually require a town vote; keep an eye on how the committee frames costs and timeline as that conversation matures.",
+   "The Littleton Water Department's federal PFAS lawsuit has just been filed \u2014 the early stages will shape how much of the town's remediation costs it can ultimately recover."
+  ],
+  "stats": {
+   "items": 75,
+   "meetings": 10,
+   "sources": 7,
+   "deadlines": 2
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]

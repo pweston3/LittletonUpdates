@@ -1,59 +1,59 @@
 {
   "sources": {
     "town_notify_inbox": {
-      "zero_runs": 2,
+      "zero_runs": 3,
       "last_yield": "2026-07-10T13:16:27.602827+00:00"
     },
     "lps_district_news": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508602+00:00"
+      "last_yield": "2026-07-13T13:27:48.913864+00:00"
     },
     "sean_for_littleton": {
       "zero_runs": 7,
       "last_yield": "2026-06-26T20:38:04.082843+00:00"
     },
     "patch_littleton": {
-      "zero_runs": 30
+      "zero_runs": 31
     },
     "lctv_youtube": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508610+00:00"
+      "last_yield": "2026-07-13T13:27:48.913869+00:00"
     },
     "reddit_sitewide": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508614+00:00"
+      "last_yield": "2026-07-13T13:27:48.913873+00:00"
     },
     "reddit_massachusetts": {
-      "zero_runs": 30
+      "zero_runs": 31
     },
     "conservation_trust": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508620+00:00"
+      "last_yield": "2026-07-13T13:27:48.913877+00:00"
     },
     "lps_official_news": {
-      "zero_runs": 0,
+      "zero_runs": 1,
       "last_yield": "2026-07-12T12:03:21.508605+00:00"
     },
     "lelwd": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508623+00:00"
+      "last_yield": "2026-07-13T13:27:48.913880+00:00"
     },
     "town_calendar": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508576+00:00"
+      "last_yield": "2026-07-13T13:27:48.913842+00:00"
     },
     "town_agendas": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508587+00:00"
+      "last_yield": "2026-07-13T13:27:48.913856+00:00"
     },
     "town_newsflash": {
       "zero_runs": 0,
-      "last_yield": "2026-07-12T12:03:21.508593+00:00"
+      "last_yield": "2026-07-13T13:27:48.913859+00:00"
     },
     "town_alerts": {
-      "zero_runs": 21
+      "zero_runs": 22
     }
   },
   "alert_runs": 3,
-  "last_run": "2026-07-12T12:03:21.508627+00:00"
+  "last_run": "2026-07-13T13:27:48.913884+00:00"
 }
