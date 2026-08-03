@@ -1,11 +1,11 @@
 {
   "sources": {
     "town_notify_inbox": {
-      "zero_runs": 1,
+      "zero_runs": 2,
       "last_yield": "2026-08-01T12:04:48.730720+00:00"
     },
     "lps_district_news": {
-      "zero_runs": 0,
+      "zero_runs": 1,
       "last_yield": "2026-08-02T12:06:49.115364+00:00"
     },
     "sean_for_littleton": {
@@ -13,48 +13,48 @@
       "last_yield": "2026-06-26T20:38:04.082843+00:00"
     },
     "patch_littleton": {
-      "zero_runs": 51
+      "zero_runs": 52
     },
     "lctv_youtube": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115368+00:00"
+      "last_yield": "2026-08-03T13:44:20.253397+00:00"
     },
     "reddit_sitewide": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115371+00:00"
+      "last_yield": "2026-08-03T13:44:20.253399+00:00"
     },
     "reddit_massachusetts": {
-      "zero_runs": 51
+      "zero_runs": 52
     },
     "conservation_trust": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115374+00:00"
+      "last_yield": "2026-08-03T13:44:20.253402+00:00"
     },
     "lps_official_news": {
-      "zero_runs": 21,
+      "zero_runs": 22,
       "last_yield": "2026-07-12T12:03:21.508605+00:00"
     },
     "lelwd": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115376+00:00"
+      "last_yield": "2026-08-03T13:44:20.253404+00:00"
     },
     "town_calendar": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115345+00:00"
+      "last_yield": "2026-08-03T13:44:20.253378+00:00"
     },
     "town_agendas": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115355+00:00"
+      "last_yield": "2026-08-03T13:44:20.253386+00:00"
     },
     "town_newsflash": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115358+00:00"
+      "last_yield": "2026-08-03T13:44:20.253389+00:00"
     },
     "town_alerts": {
       "zero_runs": 0,
-      "last_yield": "2026-08-02T12:06:49.115362+00:00"
+      "last_yield": "2026-08-03T13:44:20.253391+00:00"
     }
   },
   "alert_runs": 3,
-  "last_run": "2026-08-02T12:06:49.115379+00:00"
+  "last_run": "2026-08-03T13:44:20.253408+00:00"
 }
