@@ -324,58 +324,52 @@
  },
  {
   "iso": "2026-W32",
-  "date": "2026-08-03",
+  "date": "2026-08-09",
   "range_label": "August 3\u20139, 2026",
-  "headline": "Water Woes, New Trails, and a Town Counting Its Costs",
-  "dek": "*A week in which Littleton's long battles with contamination, drought, and infrastructure come into sharp focus \u2014 even as a new trail invites residents to simply walk outside.*",
-  "lede": "If there is a single thread running through Littleton this week, it is water \u2014 its scarcity, its safety, and its price. Real estate taxes came due on August 3, the same day the Select Board and Finance Committee sat down together at Town Hall, and residents paying those bills might reasonably wonder what their money has been buying. The answer, it turns out, is a great deal: a $45 million sewer system that ribbon-cut into full operation after coming in on schedule last fall, a $20.25 million PFAS treatment plant at Spectacle Pond now the subject of a federal lawsuit to recover those costs, and a $285,522 state grant to replace aging electrical reclosers across the distribution grid. Littleton has been spending \u2014 and, in some cases, fighting \u2014 to keep the lights on and the water clean.",
+  "headline": "Schools, Trails, and Cameras: Littleton's Busy August",
+  "dek": "*A week when the town's future classrooms, conservation legacy, and public-safety tech all demanded attention at once.*",
+  "lede": "Littleton's summer may feel quiet on the surface, but beneath it the machinery of town government is running hard. The biggest story is the one with the longest arc: the plan to replace the 64-year-old Shaker Lane Elementary School building is moving steadily through its paces, with the Massachusetts School Building Authority having approved the project budget and a Planning Board public hearing on the site's stormwater and site plan already scheduled for September 3rd. The School Committee held a retreat on August 6th, and the Building Committee met in late July \u2014 all signs that the push to give Littleton's youngest students a new home is no longer just a conversation. Meanwhile, the town's middle and high schools earned their own moment in the spotlight, with Littleton Middle School nominated for a National Blue Ribbon award and the high school receiving separate state recognition for academic excellence.",
   "sections": [
    {
-    "kicker": "The Water Bill",
-    "body": "The Littleton Water Department's federal lawsuit to recoup the $20.25 million it spent building a PFAS treatment plant at Spectacle Pond is the kind of story that takes years to unfold but deserves a close read now. That plant exists because the town's drinking water was contaminated; the lawsuit is the town's attempt to make someone else bear the cost. Meanwhile, a Level 3 Critical Drought declared by MassDEP has prompted a ban on all nonessential outdoor water use \u2014 no lawn irrigation, no car washing, no hosing down driveways. Residents checking their 2025 water quality report, now posted online by the department, will find a utility that monitors its aquifers and watersheds carefully. The drought is a reminder that careful monitoring is not the same as having enough water.",
+    "kicker": "The School Question",
+    "body": "Replacing a six-decade-old elementary school is not a small undertaking, and this week's activity shows just how many threads must be woven together before a shovel breaks ground. The MSBA's budget approval is a critical milestone \u2014 it locks in a financial framework for a project that will shape the town for generations. Now the work shifts to the regulatory and design side: the Planning Board will take up the stormwater management permit and site plan at a public hearing on September 3rd, giving residents their first formal opportunity to weigh in on how the new building will sit on the land.\n\nAll of this unfolds against a backdrop of genuine pride in what Littleton's schools are already doing. A National Blue Ribbon nomination for the middle school and a state honor for the high school are reminders that the push for a new building is about sustaining a strong system, not rescuing a struggling one.",
     "color": "#C8881A"
    },
    {
-    "kicker": "Governing in August",
-    "body": "The week opened with the Select Board and Finance Committee meeting jointly on Monday evening in Room 103 \u2014 a pairing that typically signals budget or policy matters that need both bodies in the same room. The Planning Board gathered Thursday at the Center on Shattuck Street, where road work on the traffic island has been causing delays since mid-July. A Conservation Commission hearing on 35 Shaker Lane is set for August 18, and the Shaker Lane School Building Committee held its most recent session in late July \u2014 a reminder that the school construction conversation continues quietly in the background even as summer winds down. The Zoning Board of Appeals, which published minutes from its June hearing on 6 Long Lake Road, meets again on August 20.",
+    "kicker": "Conservation's Week",
+    "body": "Conservation made its presence felt on multiple fronts. The headline moment was a celebratory one: the Littleton Conservation Trust officially opened the Art Lazarus Trail at Long Lake Park Conservation Area, named for a volunteer who contributed 33 years to the town's conservation work, from 1984 to 2017. It is the kind of community milestone that tends to get lost in the shuffle of permits and agendas, but it deserves to be marked \u2014 a trail named for a neighbor who showed up, year after year, because the land mattered to him.\n\nLess celebratory, but equally important, is a free public talk coming to Reuben Hoar Library on the environmental and health risks of common yard pesticides, framed around their role in dramatic insect population declines. The Conservation Commission also met on August 4th and has a joint meeting with the Select Board on August 10th \u2014 and a public hearing focused on 35 Shaker Lane scheduled for August 18th, a reminder that the commission's work is never just philosophical. For residents who want to do something tangible in the meantime, the Littleton Trails Hiking Challenge continues, inviting neighbors to get out and log the very lands the commission works to protect.",
     "color": "#2E7D5B"
    },
    {
-    "kicker": "Long Lake, Two Ways",
-    "body": "Long Lake offered a small study in contrasts this week. On Friday, August 7, the lake closes entirely to boating and swimming so crews can treat invasive aquatic plants \u2014 an intervention that speaks to how much maintenance wild places quietly require. And yet just steps away, the Littleton Conservation Trust recently opened the Art Lazarus Trail at Long Lake Park Conservation Area, honoring a volunteer who gave 33 years to local conservation. The Littleton Trails Hiking Challenge is still running and open to new participants. The message from the natural side of town is consistent: these places are worth protecting, and the work is never quite finished.",
+    "kicker": "Watching the Watchers",
+    "body": "The Littleton Police Department released a statement this week updating residents on the town's Flock automated license plate camera system. The update did not come out of nowhere \u2014 automated license plate readers have sparked debate in communities across the state about the balance between public safety and privacy. The police chief's decision to put a statement out proactively suggests the department is aware of that tension. Residents who want to understand how the system is being used should look for that update on the town's public safety pages.",
     "color": "#2A7E8C"
    },
    {
-    "kicker": "On the Grid",
-    "body": "Littleton Electric Light and Water Departments has had an eventful stretch. The utility's $285,522 state grant to replace six aging reclosers will mean shorter, more contained outages when the grid is stressed. Less comfortably, LELWD's 2025 disclosure of foreign hackers targeting its computer systems was recently featured on '60 Minutes,' bringing national attention to a cybersecurity incident the utility first went public with in March of last year. There is also a FLOCK camera program update in circulation, though details remain sparse. Taken together, the picture is of a municipal utility that is both investing in resilience and navigating scrutiny it did not entirely choose.",
+    "kicker": "The Meeting Calendar",
+    "body": "The week was also a busy one for routine but essential civic business. The Select Board and Finance Committee held a joint session on August 3rd, a pairing that almost always signals budget or capital planning discussions. The Planning Board met on August 6th. Looking ahead, the Park and Recreation Commission meets August 11th, the Board of Health on August 12th, and the Zoning Board of Appeals on August 20th \u2014 a full slate as summer winds down and fall planning picks up.",
     "color": "#2C5BA6"
-   },
-   {
-    "kicker": "Schools and Community",
-    "body": "The School Committee's Negotiating Subcommittee met in late July at Reuben Hoar Library, and the CLUB Afterschool program is asking families to visit its new website and weigh in on how the program can improve. A free public talk called 'Silent Spring II,' scheduled at Reuben Hoar Library, will take up the damage done by yard pesticides \u2014 including an 80 to 90 percent drop in Monarch butterfly populations. It is a fitting companion to the Art Lazarus Trail opening: both ask residents to think about what kind of place Littleton wants to be, not just for people, but for everything living here.",
-    "color": "#102A54"
    }
   ],
-  "pull_quote": "The town has been spending \u2014 and in some cases fighting \u2014 to keep the lights on and the water clean.",
+  "pull_quote": "A trail named for a neighbor who showed up, year after year, because the land mattered to him.",
   "threads": [
-   "Watch the Conservation Commission's August 18 public hearing on 35 Shaker Lane, which may shed light on development pressure near protected land.",
-   "The Select Board meets again August 10 \u2014 worth tracking whether the joint Finance Committee session from August 3 produces any public follow-up.",
-   "The federal PFAS lawsuit is in early stages; any court filings or response from defendants will be significant for the Water Department's long-term finances."
+   "Watch the September 3rd Planning Board public hearing on the Shaker Lane School site plan \u2014 this is residents' first formal chance to shape how the new building fits the neighborhood.",
+   "The Select Board and Conservation Commission joint meeting on August 10th could signal how the town is thinking about land and development together heading into fall.",
+   "The Flock camera update from the police chief is worth reading closely; how the town accounts for the system's use will set a precedent for future public-safety technology decisions."
   ],
   "stats": {
-   "items": 41,
-   "meetings": 7,
-   "sources": 7,
-   "deadlines": 3
+   "items": 63,
+   "meetings": 10,
+   "sources": 6,
+   "deadlines": 2
   },
   "sources": [
    "Town Meeting Calendar",
    "Agenda Center",
    "Town News & Announcements",
-   "Alert Center",
+   "Littleton Public Schools",
    "Littleton Community Television",
-   "Littleton Conservation Trust",
-   "Littleton Electric Light & Water"
+   "Littleton Conservation Trust"
   ]
  }
 ]
