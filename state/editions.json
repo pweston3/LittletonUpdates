@@ -371,5 +371,61 @@
    "Littleton Community Television",
    "Littleton Conservation Trust"
   ]
+ },
+ {
+  "iso": "2026-W33",
+  "date": "2026-08-10",
+  "range_label": "August 10\u201316, 2026",
+  "headline": "A Town Building Its Future, One Project at a Time",
+  "dek": "*From a long-awaited school replacement to a landmark sewer ribbon-cutting, Littleton is deep in the work of renewal this August.*",
+  "lede": "The biggest story in Littleton right now isn't any single meeting or vote \u2014 it's the unmistakable sense that the town is in the middle of building something. The Massachusetts School Building Authority has approved the budget for a new Shaker Lane Elementary School, clearing a critical hurdle for replacing a 64-year-old building that has served the community well past its intended life. Across town, the $45 million Common Sewer System \u2014 years in the making \u2014 has been declared fully operational, already drawing economic interest to the downtown. And beneath all of it runs a harder story: Littleton's Water Department has filed a federal lawsuit seeking to recover the $20.25 million it spent cleaning PFAS contamination from a drinking water well, a reminder that not every cost a town bears should fall on its residents alone.",
+  "sections": [
+   {
+    "kicker": "The New Shaker Lane",
+    "body": "With the MSBA's budget approval in hand, the Shaker Lane School project has momentum that felt uncertain not long ago. The Building Committee met in late July, and come September 3rd, the Planning Board will hold a public hearing on the stormwater management permit and site plan \u2014 the kind of technical but consequential step that turns an approved budget into an actual building. The Conservation Commission has also scheduled a public hearing on 35 Shaker Lane for August 18th, and the Select Board joined the Conservation Commission for a joint session on August 10th, signaling that multiple town bodies are coordinating carefully around the site. Parents and neighbors will want to watch these hearings closely: the decisions made now will shape what the school looks like for the next 60 years.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Schools on a Roll",
+    "body": "The school construction news lands in a week of broader good feeling about Littleton's public schools. Littleton Middle School has been nominated for a National Blue Ribbon award \u2014 one of the most prestigious recognitions in American K-12 education \u2014 and has separately been ranked among the top-performing schools in Massachusetts. Littleton High School received its own state-level honor. The School Committee held a retreat on August 6th, and while the specifics of those conversations aren't public yet, it's hard to imagine the mood in that room wasn't buoyed by the recognition rolling in from outside.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Water, In Every Sense",
+    "body": "Water is the thread connecting several of this week's most significant stories. The sewer system ribbon-cutting marks the completion of a decade-defining infrastructure project, and town officials say it is already beginning to shape development patterns downtown \u2014 precisely the economic catalyst its advocates promised. At the same time, the Littleton Electric Light and Water Department has filed a federal lawsuit to recover the $20.25 million it spent building a PFAS treatment plant, a cost that should never have been the town's to bear. And on top of all that, a Level 3 Critical Drought has triggered a ban on all nonessential outdoor water use \u2014 no lawn irrigation, no car washing, no surface cleaning. The irony of celebrating a new sewer system while asking residents to conserve every drop is not lost on anyone paying attention.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Conservation & Community",
+    "body": "Not all of this week's news was about budgets and bureaucracy. The Littleton Conservation Trust formally opened the Art Lazarus Trail at Long Lake Park Conservation Area, honoring a volunteer who gave 33 years of his life to conservation work in town. It's the kind of moment that doesn't make headlines outside Littleton but means everything inside it \u2014 a trail named for a neighbor, in a park that neighbors stewarded together. The Conservation Commission has been active on multiple fronts, with recent meetings and fresh minutes posted, and its joint session with the Select Board this week reflects how central environmental questions have become to nearly every major decision the town faces.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "The Grid Gets Stronger",
+    "body": "One quieter piece of good news: Littleton Electric Light and Water has been awarded a $285,522 state grant to replace six outdated electrical reclosers \u2014 the equipment that helps isolate faults on power lines and limit the scope of outages. It's unglamorous infrastructure, the kind that only gets noticed when it fails. But for Littleton and neighboring Boxborough, newer reclosers mean shorter outages and a more resilient grid, and securing state money to pay for it is exactly the kind of fiscal care that keeps municipal electric rates manageable.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "The decisions made now at Shaker Lane will shape what the school looks like for the next 60 years.",
+  "threads": [
+   "Watch the Conservation Commission's public hearing on 35 Shaker Lane (August 18th) \u2014 the outcome will affect the school site planning process.",
+   "The Planning Board's September 3rd hearing on the Shaker Lane stormwater and site plan is the next major public milestone for the school project.",
+   "The LWD federal PFAS lawsuit is in early stages; how it proceeds could set a precedent for how towns across Massachusetts recover contamination cleanup costs."
+  ],
+  "stats": {
+   "items": 72,
+   "meetings": 6,
+   "sources": 7,
+   "deadlines": 2
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
