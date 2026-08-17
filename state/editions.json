@@ -422,5 +422,57 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W34",
+  "date": "2026-08-17",
+  "range_label": "August 17\u201323, 2026",
+  "headline": "A New School, a Ribbon Cut, and a Town Building Its Future",
+  "dek": "*Littleton is in a season of construction \u2014 literal and civic \u2014 as big investments in schools, sewers, and water come into focus at once.*",
+  "lede": "Some weeks in a small town feel like turning a page. This is one of them. The Massachusetts School Building Authority has approved the budget for a new Shaker Lane School, clearing a major hurdle for a project that would replace a 64-year-old building that has educated generations of Littleton children. Meanwhile, the $45 million Littleton Common Sewer System \u2014 years in the making \u2014 has officially gone live, with a ribbon cutting marking the moment. And the Littleton Water Department has filed a federal lawsuit seeking to recover $20.25 million it spent building a treatment plant to remove PFAS contamination from a drinking water well. Taken together, these are not routine municipal updates. They are the shape of a town deciding what it owes the next generation.",
+  "sections": [
+   {
+    "kicker": "School on the Move",
+    "body": "The Shaker Lane School project is now moving faster than it has in years. With the MSBA's budget approval in hand, the Building Committee met on July 22nd and is scheduled to meet again on August 19th \u2014 the pace itself a signal of momentum. The School Committee held a retreat in early August, and Littleton's schools arrived in this stretch of summer with something extra: state recognition for academic excellence. That's a useful backdrop as the community prepares to make a generational decision about the building those students learn in.\n\nThe project's footprint is already reaching other town boards. The Planning Board has scheduled a public hearing for September 3rd to take up a stormwater management permit and site plan for the new school \u2014 a sign that the work is moving from concept toward ground. Residents who want to shape the details of what gets built, and how, are running out of time to wait.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Infrastructure Moment",
+    "body": "The ribbon cutting on the Littleton Common Sewer System is the kind of civic milestone that doesn't get enough credit. At $45 million and nearly two years of construction, it's one of the largest infrastructure investments the town has made in recent memory \u2014 and it's already being credited with spurring economic activity in the town center. Sewers are not glamorous, but they are the precondition for almost everything else a growing town center needs.\n\nAt the same time, LELWD notched a $285,522 state grant to replace aging equipment and reduce the duration of local power outages \u2014 a quieter win, but a real one for anyone who's sat through a summer storm with the lights out. The Light and Water Commissioners met on August 13th, and the pace of utility business in Littleton right now reflects a department actively modernizing.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Water Under Pressure",
+    "body": "Behind the ribbon cuttings, there's a harder story about water. Littleton Water Department's federal lawsuit to recover $20.25 million in PFAS cleanup costs puts a number on the damage that contamination caused \u2014 and signals the town is not willing to absorb that cost quietly. Separately, the Water Department routinely tests 150 monitoring wells and uses zoning tools and environmental audits to protect the town's drinking water sources, a level of vigilance that reflects how seriously this community takes what comes out of the tap.\n\nThen there is the drought. Littleton is under a Level 3 Critical designation, and all nonessential outdoor water use \u2014 lawn irrigation, car washing, surface cleaning \u2014 is currently banned. The timing is pointed: a town fighting in federal court over water quality is simultaneously rationing water use under a summer drought. Residents should take the restrictions seriously and check the Water Department's guidance for the latest status.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Land and Conservation",
+    "body": "On a warmer note, the Littleton Conservation Trust officially opened the Art Lazarus Trail at Long Lake Park Conservation Area this week, naming it for a volunteer who gave 33 years of conservation work to this town. It's the kind of honor that means something in a community where much of what gets protected stays protected because of people who show up, year after year, without being asked twice.\n\nThe Conservation Commission has been busy on multiple fronts \u2014 it met jointly with the Select Board on August 10th and has a public meeting scheduled for 73 Hartwell Ave in September. The Community Preservation Committee meets August 20th, and the Reuben Hoar Library is hosting a free talk on how yard pesticides affect insects and the broader environment. For a town under drought stress, with an active PFAS lawsuit and 150 monitored wells, the connection between what people put on their lawns and what ends up in the water supply is not abstract.",
+    "color": "#2C5BA6"
+   }
+  ],
+  "pull_quote": "A town fighting in federal court over water quality is simultaneously rationing water use under a summer drought.",
+  "threads": [
+   "Watch the Shaker Lane School Building Committee meeting on August 19th \u2014 the MSBA budget approval makes this a pivotal session for what comes next in the design and timeline.",
+   "The Planning Board's September 3rd public hearing on the school's stormwater and site plan is the first formal opportunity for residents to weigh in on how the new building fits its surroundings.",
+   "The Level 3 Critical Drought designation and outdoor watering ban remain in effect \u2014 monitor the Water Department's updates as the late-summer dry stretch continues."
+  ],
+  "stats": {
+   "items": 82,
+   "meetings": 6,
+   "sources": 8,
+   "deadlines": 1
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
