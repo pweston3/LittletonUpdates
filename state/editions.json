@@ -479,5 +479,62 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W35",
+  "date": "2026-08-24",
+  "range_label": "August 24\u201330, 2026",
+  "headline": "Schools, Sewers, and Surveillance: Littleton's Big Week",
+  "dek": "*A new school takes shape, a sewer system opens for business, and a camera controversy refuses to stay buried \u2014 all as residents head to the polls.*",
+  "lede": "Littleton enters September riding a wave of long-deferred infrastructure finally coming to fruition \u2014 and confronting at least one uncomfortable surprise along the way. The Massachusetts School Building Authority approved the budget for the Shaker Lane School construction project, giving the community a clearer path toward replacing a 64-year-old elementary building that has long outlived its useful life. At nearly the same moment, the town cut the ribbon on a $45 million common sewer system, nearly two years in the making, that officials say is already beginning to attract economic development to the town center. Big projects, big price tags, and \u2014 as the Flock camera saga reminds us \u2014 big questions about who is really in charge.",
+  "sections": [
+   {
+    "kicker": "New School Rising",
+    "body": "The approval of the Shaker Lane School project budget by the MSBA is the clearest signal yet that Littleton's plan to replace its aging elementary school is moving from aspiration to reality. The Building Committee met on August 19th to keep the work on track, and the Planning Board has scheduled a public hearing for September 3rd to take up the stormwater management and site plan \u2014 the kind of unglamorous but essential regulatory groundwork that separates a vision from a building. Residents who want to understand what comes next, or to weigh in on how the site will handle runoff and traffic, should mark that date on their calendars.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Infrastructure Arriving",
+    "body": "The sewer ribbon-cutting closed the chapter on a construction effort that reshaped streets and disrupted routines for the better part of two years, and the $45 million investment is already showing early returns in the town center. Meanwhile, Littleton Electric Light and Water picked up a $285,522 state grant to replace aging electrical equipment \u2014 work that promises to shorten the outages that frustrate residents and businesses alike. These aren't flashy announcements, but they represent the kind of steady municipal investment that shapes daily life for decades.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Water Under Pressure",
+    "body": "Not all of Littleton's water news is celebratory. The Water Department has filed a federal lawsuit seeking to recover the $20.25 million cost of a treatment plant built to remove PFAS contamination from the Spectacle Pond drinking water supply \u2014 making clear that the town views those costs as someone else's liability. At the same time, a Level 3 Critical Drought designation has triggered a ban on all nonessential outdoor water use, from lawn irrigation to car washing. The department routinely monitors 150 wells across 40 properties to protect the aquifers that supply the town; right now, every drop counts.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Cameras Without Consent",
+    "body": "The most unsettling story of the week involves the Flock license plate reader system. After the Select Board ordered all six cameras shut down in May, five of the six were discovered to have been secretly reactivated by the company \u2014 without notifying the town. The revelation raises straightforward questions about municipal authority over contracted technology, and about what residents can reasonably expect when their elected officials make a decision. The Select Board meets again on August 31st, and this item seems unlikely to stay quiet.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Trails and the Ballot",
+    "body": "On a warmer note, the town officially opened the Art Lazarus Trail at Long Lake Park Conservation Area, honoring a volunteer who gave 33 years to local conservation. It's a fitting moment as the Littleton Trails Hiking Challenge continues to draw residents out onto the landscape the town works hard to protect. And civic participation of a different kind is front and center this week: the State Primary falls on September 1st, with polls open from 7 a.m. to 8 p.m. at Littleton Middle School. Early in-person voting was available on August 24th at 37 Shattuck Street, and mail-in voters should confirm their ballots are on the way.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "Five of six cameras the Select Board ordered shut down were found to have been secretly reactivated by the company.",
+  "threads": [
+   "Watch the September 3rd Planning Board hearing on the Shaker Lane School site plan \u2014 public comment shapes what gets built and how the site handles stormwater.",
+   "The Select Board meets August 31st; expect the Flock camera reactivation to force a direct conversation about contract oversight and vendor accountability.",
+   "With a Level 3 Critical Drought in effect, track whether outdoor watering restrictions are extended or tightened as the dry late-summer stretch continues."
+  ],
+  "stats": {
+   "items": 48,
+   "meetings": 1,
+   "sources": 8,
+   "deadlines": 2
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
