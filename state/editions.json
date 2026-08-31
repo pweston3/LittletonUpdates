@@ -536,5 +536,61 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W36",
+  "date": "2026-08-31",
+  "range_label": "Aug 31 \u2013 Sep 6, 2026",
+  "headline": "Schools, Cameras, and a Trail: Littleton's Week of Reckoning",
+  "dek": "*A landmark school project clears a major hurdle, surveillance cameras spark a national story, and the town pauses to honor 33 years of quiet conservation work.*",
+  "lede": "It was a week that asked Littleton residents to hold two very different feelings at once. On one hand, the Massachusetts School Building Authority approved the budget for the long-awaited Shaker Lane School construction project, moving the town closer to finally replacing a 64-year-old building. On the other, two separate cases involving adults trusted with the care of Littleton schoolchildren \u2014 a bus driver charged with raping a child, and a former aide who pleaded guilty to assaulting nonverbal autistic students \u2014 cast a shadow over the start of the school year. The contrast was stark: a community straining toward something better for its kids while confronting painful failures in their protection.",
+  "sections": [
+   {
+    "kicker": "Building Tomorrow",
+    "body": "The Shaker Lane School project took its biggest step forward in years when the Massachusetts School Building Authority formally approved the construction budget, unlocking the path to replacing a building that has served Littleton for six decades longer than most people expected it to. The Shaker Lane School Building Committee has been meeting regularly, and this week the Planning Board held a public hearing on the site's stormwater management permit and site plan \u2014 the kind of procedural work that is easy to overlook but essential to breaking ground. The project now moves deeper into the regulatory and design phases, with community members invited to stay engaged as the details take shape.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Trust and Schools",
+    "body": "Against that hopeful backdrop came two deeply troubling reminders of institutional failure. A Marlborough man who drove a school bus serving Littleton children has been charged with raping a child. Separately, a former Littleton Public Schools aide pleaded guilty in court to physically assaulting nonverbal autistic children while on duty in 2024. Neither case is new, but both arrived in the public record this week, and together they demand a clear-eyed look at how the district screens and supervises the adults who work most closely with its most vulnerable students. The School Committee's Communications Subcommittee met last week, and these questions will not stay quiet for long.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Cameras and Accountability",
+    "body": "Littleton found itself at the center of a national story this week over surveillance technology. After the Select Board ordered all six Flock Safety license-plate cameras shut down, five were found to have been secretly reactivated by the company \u2014 without notifying the town. The Littleton Police Department issued a public update on the situation, and the episode has drawn scrutiny to Flock contracts in communities across the country, with four other municipalities ending their agreements within the same five-day window. The story cuts to a fundamental question of who controls public infrastructure, and whether a private vendor can override an elected board's explicit decision.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Recognition and Roots",
+    "body": "There was genuine cause for pride in the schools this week as well. Littleton Middle School received a nomination for a National Blue Ribbon Award, and the high school earned a separate state honor \u2014 recognition echoed by a state designation for educational excellence across the district. Five students were also recognized statewide for outstanding achievement in world languages. The accolades matter, but so does context: excellence in the classroom coexists with the hard governance questions the community is navigating elsewhere.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Land and Legacy",
+    "body": "Away from the headlines, Littleton Conservation Trust marked a quieter but meaningful moment with the official opening of the Art Lazarus Trail at Long Lake Park Conservation Area. The trail is named for a volunteer who gave 33 years to conservation work in this community \u2014 the kind of sustained, unglamorous commitment that keeps a town's green spaces alive and cared for. The Littleton Trails Hiking Challenge continues alongside the opening, inviting residents to explore those spaces themselves. A free talk at Reuben Hoar Library on the hidden dangers of yard pesticides adds another thread to the week's conservation conversation, connecting backyard choices to the broader health of local ecosystems.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "Five of six cameras the Select Board ordered shut down were quietly turned back on \u2014 without telling the town.",
+  "threads": [
+   "Watch the Planning Board: zoning bylaw amendments headed to a Fall Special Town Meeting were also on the agenda September 3rd \u2014 details on what changes are proposed will shape the STM debate.",
+   "The Flock Safety fallout is moving fast; track whether the Select Board takes further action and whether Littleton joins other towns in ending its contract.",
+   "The Conservation Commission takes up 200 Whitcomb Ave on September 22nd \u2014 a site to watch as the town balances development pressure with its conservation commitments."
+  ],
+  "stats": {
+   "items": 51,
+   "meetings": 9,
+   "sources": 7,
+   "deadlines": 3
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust"
+  ]
  }
 ]
