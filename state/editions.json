@@ -539,58 +539,57 @@
  },
  {
   "iso": "2026-W36",
-  "date": "2026-08-31",
+  "date": "2026-09-06",
   "range_label": "Aug 31 \u2013 Sep 6, 2026",
-  "headline": "Schools, Cameras, and a Trail: Littleton's Week of Reckoning",
-  "dek": "*A landmark school project clears a major hurdle, surveillance cameras spark a national story, and the town pauses to honor 33 years of quiet conservation work.*",
-  "lede": "It was a week that asked Littleton residents to hold two very different feelings at once. On one hand, the Massachusetts School Building Authority approved the budget for the long-awaited Shaker Lane School construction project, moving the town closer to finally replacing a 64-year-old building. On the other, two separate cases involving adults trusted with the care of Littleton schoolchildren \u2014 a bus driver charged with raping a child, and a former aide who pleaded guilty to assaulting nonverbal autistic students \u2014 cast a shadow over the start of the school year. The contrast was stark: a community straining toward something better for its kids while confronting painful failures in their protection.",
+  "headline": "New Sewer, Old School, and a Water Fight Littleton Can't Ignore",
+  "dek": "*A week of big infrastructure milestones and bigger questions about who pays for the town Littleton is becoming.*",
+  "lede": "After two years of construction and $45 million in investment, Littleton's new Common Sewer System is fully operational \u2014 a ribbon-cutting moment that marks a genuine turning point for the town center. The timing is notable: Littleton is simultaneously wrestling with a 64-year-old elementary school that the state has now agreed needs replacing, a federal lawsuit over drinking-water contamination that cost $20.25 million to remediate, and a Level 3 Critical Drought that has banned all nonessential outdoor watering. The throughline is impossible to miss. Littleton is a town investing heavily in its own future \u2014 and working hard to make sure someone else picks up the tab for the damage done to it.",
   "sections": [
    {
-    "kicker": "Building Tomorrow",
-    "body": "The Shaker Lane School project took its biggest step forward in years when the Massachusetts School Building Authority formally approved the construction budget, unlocking the path to replacing a building that has served Littleton for six decades longer than most people expected it to. The Shaker Lane School Building Committee has been meeting regularly, and this week the Planning Board held a public hearing on the site's stormwater management permit and site plan \u2014 the kind of procedural work that is easy to overlook but essential to breaking ground. The project now moves deeper into the regulatory and design phases, with community members invited to stay engaged as the details take shape.",
+    "kicker": "Town Center Transformed",
+    "body": "The ribbon cutting on the Common Sewer System is the kind of milestone that sounds bureaucratic until you consider what it actually means: businesses and homes in the town center that have long operated on aging septic systems are now connected to modern infrastructure, and economic development is already being cited as a result. It's the sort of unglamorous civic investment that makes everything else possible \u2014 new housing, new commercial activity, a more resilient downtown. The Select Board, which met on August 31st alongside the Board of Assessors and the Park and Recreation Commission, has plenty on its plate as the town absorbs what this new capacity makes possible.",
     "color": "#C8881A"
    },
    {
-    "kicker": "Trust and Schools",
-    "body": "Against that hopeful backdrop came two deeply troubling reminders of institutional failure. A Marlborough man who drove a school bus serving Littleton children has been charged with raping a child. Separately, a former Littleton Public Schools aide pleaded guilty in court to physically assaulting nonverbal autistic children while on duty in 2024. Neither case is new, but both arrived in the public record this week, and together they demand a clear-eyed look at how the district screens and supervises the adults who work most closely with its most vulnerable students. The School Committee's Communications Subcommittee met last week, and these questions will not stay quiet for long.",
+    "kicker": "School on the Move",
+    "body": "The other major capital story of the moment is Shaker Lane Elementary School, a 64-year-old building that Littleton is now formally moving to replace. The Massachusetts School Building Authority approved the project budget \u2014 a significant green light that clears the path toward construction. The Shaker Lane School Building Committee has been meeting virtually every month since at least May, with minutes and recordings posted publicly, and the pace suggests a project that is gaining momentum rather than stalling. A School Committee meeting is set for September 10th, where the school year's opening business will likely include an update on where the project stands.\n\nAgainst that backdrop, the news from the schools this week carried real emotional weight. Littleton Middle School earned a nomination for a national Blue Ribbon award, and the high school received separate state-level recognition \u2014 reminders that even as the buildings age, the people inside them are doing something right. Those honors arrived alongside the sobering news that a former school bus aide pleaded guilty to assaulting nonverbal autistic children in 2024, a case that has cast a long shadow over the district.",
     "color": "#2E7D5B"
    },
    {
-    "kicker": "Cameras and Accountability",
-    "body": "Littleton found itself at the center of a national story this week over surveillance technology. After the Select Board ordered all six Flock Safety license-plate cameras shut down, five were found to have been secretly reactivated by the company \u2014 without notifying the town. The Littleton Police Department issued a public update on the situation, and the episode has drawn scrutiny to Flock contracts in communities across the country, with four other municipalities ending their agreements within the same five-day window. The story cuts to a fundamental question of who controls public infrastructure, and whether a private vendor can override an elected board's explicit decision.",
+    "kicker": "Water Under Pressure",
+    "body": "Littleton's water story this week is really two stories running in parallel. On one front, the Littleton Water Department filed a federal lawsuit seeking to recover costs from building a $20.25 million treatment plant required to remove PFAS contamination from a town drinking water well. The town didn't create the contamination; it simply had to pay to fix it \u2014 and now it wants to be made whole. On another front, Littleton is under a Level 3 Critical Drought designation, meaning all nonessential outdoor water use is currently banned. Lawn irrigation, car washing, surface washing \u2014 all off limits. The Water Department's routine work of testing 150 monitoring wells and enforcing zoning near drinking water sources takes on added urgency when the aquifer is already under stress. The Board of Health meets September 9th, and drought conditions are likely to be part of the conversation.",
     "color": "#2A7E8C"
    },
    {
-    "kicker": "Recognition and Roots",
-    "body": "There was genuine cause for pride in the schools this week as well. Littleton Middle School received a nomination for a National Blue Ribbon Award, and the high school earned a separate state honor \u2014 recognition echoed by a state designation for educational excellence across the district. Five students were also recognized statewide for outstanding achievement in world languages. The accolades matter, but so does context: excellence in the classroom coexists with the hard governance questions the community is navigating elsewhere.",
+    "kicker": "Trails and Green Spaces",
+    "body": "Not everything this week was infrastructure and litigation. Littleton officially opened the Art Lazarus Trail at Long Lake Park Conservation Area, honoring a volunteer who gave 33 years to local conservation work. The ribbon cutting offered a moment of civic warmth \u2014 the kind of occasion that draws neighbors out to celebrate someone who quietly made the town better. The Littleton Conservation Trust's ongoing hiking challenge continues to invite residents to get out on local trails and log their hikes. The Conservation Commission, which held a joint meeting with the Select Board in August and meets again virtually on September 8th, has been active all summer \u2014 a reflection of how seriously Littleton takes the green spaces that define its character.",
     "color": "#2C5BA6"
    },
    {
-    "kicker": "Land and Legacy",
-    "body": "Away from the headlines, Littleton Conservation Trust marked a quieter but meaningful moment with the official opening of the Art Lazarus Trail at Long Lake Park Conservation Area. The trail is named for a volunteer who gave 33 years to conservation work in this community \u2014 the kind of sustained, unglamorous commitment that keeps a town's green spaces alive and cared for. The Littleton Trails Hiking Challenge continues alongside the opening, inviting residents to explore those spaces themselves. A free talk at Reuben Hoar Library on the hidden dangers of yard pesticides adds another thread to the week's conservation conversation, connecting backyard choices to the broader health of local ecosystems.",
+    "kicker": "What's Coming",
+    "body": "The fall civic calendar fills up quickly. The Zoning Board of Appeals has a public hearing scheduled for September 17th on a property at 22 George Street, and the Affordable Housing Trust, which met September 3rd, will continue its work as housing pressure across the region keeps local affordability in the conversation. Planning Board meetings, a Conservation Commission session, and the Select Board's next regular meeting on September 14th all arrive in the coming days. The season ahead looks as busy as the one just past.",
     "color": "#102A54"
    }
   ],
-  "pull_quote": "Five of six cameras the Select Board ordered shut down were quietly turned back on \u2014 without telling the town.",
+  "pull_quote": "Littleton didn't create the contamination \u2014 it simply had to pay to fix it.",
   "threads": [
-   "Watch the Planning Board: zoning bylaw amendments headed to a Fall Special Town Meeting were also on the agenda September 3rd \u2014 details on what changes are proposed will shape the STM debate.",
-   "The Flock Safety fallout is moving fast; track whether the Select Board takes further action and whether Littleton joins other towns in ending its contract.",
-   "The Conservation Commission takes up 200 Whitcomb Ave on September 22nd \u2014 a site to watch as the town balances development pressure with its conservation commitments."
+   "Watch the September 10th School Committee meeting for the latest on the Shaker Lane building project timeline and any back-to-school updates.",
+   "Track the Littleton Water Department's federal PFAS lawsuit as it moves through the courts \u2014 the $20.25 million question of who ultimately pays.",
+   "The Level 3 Critical Drought and outdoor watering ban: follow conditions at the Water Department and Board of Health as the dry stretch continues into fall."
   ],
   "stats": {
-   "items": 51,
+   "items": 58,
    "meetings": 9,
-   "sources": 7,
-   "deadlines": 3
+   "sources": 6,
+   "deadlines": 1
   },
   "sources": [
    "Town Meeting Calendar",
    "Agenda Center",
-   "Town News & Announcements",
    "Littleton Public Schools",
    "Littleton Community Television",
-   "Reddit",
-   "Littleton Conservation Trust"
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
   ]
  }
 ]
