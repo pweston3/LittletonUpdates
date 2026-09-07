@@ -591,5 +591,62 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W37",
+  "date": "2026-09-07",
+  "range_label": "September 7\u201313, 2026",
+  "headline": "New School, Clean Water, and a Town Finding Its Footing",
+  "dek": "*A week of hard-won progress in Littleton \u2014 on the schools front, underground, and in the courts \u2014 shadowed by drought and a painful reckoning in the district.*",
+  "lede": "If there is a single thread running through Littleton this week, it is the slow, expensive, unglamorous work of replacing the things a community depends on. The Massachusetts School Building Authority signed off on the budget for a new Shaker Lane Elementary School, giving formal momentum to a project that would retire a 64-year-old building that has long outlived its useful life. Across town, a ribbon was cut on a $45 million Common Sewer System that took nearly two years to build and is already drawing economic interest to the town center. And in federal court, the Littleton Water Department is fighting to make someone else pay for the $20.25 million treatment plant it was forced to build after PFAS contamination reached the Spectacle Pond drinking water supply. This is a town spending big to catch up \u2014 and beginning to ask who owes it.",
+  "sections": [
+   {
+    "kicker": "The School Question",
+    "body": "The Shaker Lane School Building Committee has been meeting virtually every month since spring \u2014 May, June, July, August \u2014 and now, with the MSBA's budget approval in hand, those meetings carry real weight. Replacing a building that has stood since the early 1960s is never a simple proposition, and the committee's steady cadence of work suggests the town is treating this with appropriate seriousness. The School Committee meets Thursday, September 10, and the Shaker Lane project is likely to remain near the top of the conversation.\n\nThat conversation is happening against a backdrop of genuine academic achievement. Littleton Public Schools received state recognition for high academic performance this week, and Littleton Middle School earned a nomination for a National Blue Ribbon \u2014 a federal distinction awarded to schools that demonstrate excellence or significant improvement. Littleton High School received a separate state honor. The accolades make the case, implicitly, for the investment the community is being asked to make in its school buildings.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "A Guilty Plea, A Hard Reckoning",
+    "body": "The good news in the schools came alongside something much harder. A former Littleton school bus aide pleaded guilty this week to physically assaulting nonverbal autistic children on a school bus in 2024. The case is a reminder that institutional trust \u2014 the kind parents extend every morning when they put a child on a bus \u2014 has to be actively earned and protected. The district has said little publicly about what changes followed the 2024 incidents, and residents will be watching whether the School Committee addresses the matter when it meets Thursday.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Underground Progress",
+    "body": "The ribbon cutting on the new Common Sewer System was a genuine milestone. At $45 million, it is among the largest infrastructure investments Littleton has made, and after nearly two years of disruption, seeing it declared fully operational is the kind of news that tends to get underappreciated. Town officials noted it has already begun spurring economic development in the town center \u2014 which was, of course, part of the point.\n\nLess celebratory, but equally significant, is the Water Department's decision to sue in federal court to recover the cost of its PFAS treatment plant. The $20.25 million facility was not optional \u2014 federal standards required it once contamination was detected in Spectacle Pond \u2014 and the lawsuit represents the town's attempt to hold the source of that contamination financially responsible. The outcome will take time, but filing was the necessary first step.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Drought and the Land",
+    "body": "Littleton is currently under a Level 3 Critical Drought designation, the state's most severe category before emergency declarations. All nonessential outdoor water use \u2014 lawn irrigation, car washing, driveway washing \u2014 is prohibited. Residents should take the restriction seriously; the Water Department is already managing a contaminated supply at Spectacle Pond, and drought compounds pressure on every source the town draws from.\n\nThe conservation community, meanwhile, is as active as ever. The Art Lazarus Trail at Long Lake Park Conservation Area was formally opened, honoring a volunteer who gave 33 years to local conservation work. The Littleton Conservation Trust's hiking challenge continues, and a free talk at Reuben Hoar Library is coming up on the threat yard pesticides pose to insects and wildlife \u2014 including an 80 to 90 percent drop in U.S. monarch butterfly populations. In a drought year, the connection between what we put on our lawns and what ends up in our water feels particularly pointed.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "On the Boards",
+    "body": "The Planning Board met September 3, and the Zoning Board of Appeals has a public hearing on the calendar for 22 George Street on September 17 \u2014 a property worth watching as development interest in town grows. The Select Board meets Monday, September 14, and the Conservation Commission meets Tuesday, September 8. Town Hall is busy, and the agenda is full.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "This is a town spending big to catch up \u2014 and beginning to ask who owes it.",
+  "threads": [
+   "Watch the School Committee meeting Thursday, September 10, for any statement on the bus aide guilty plea and what safeguards have followed.",
+   "The Shaker Lane Building Committee's next steps \u2014 now that MSBA has approved the budget \u2014 will shape how and when a community vote on the project is put to residents.",
+   "The ZBA public hearing on 22 George Street on September 17 could signal the direction of infill development as the new sewer system opens up the town center.",
+   "The Level 3 Critical Drought designation bears watching; any escalation in restrictions would affect residents, businesses, and the Water Department's already-strained supply picture."
+  ],
+  "stats": {
+   "items": 58,
+   "meetings": 3,
+   "sources": 7,
+   "deadlines": 1
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
