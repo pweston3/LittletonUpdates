@@ -642,5 +642,56 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W38",
+  "date": "2026-09-14",
+  "range_label": "September 14\u201320, 2026",
+  "headline": "Schools Shine, a New Trail Opens, and Town Hall Stays Busy",
+  "dek": "*A week when Littleton's classrooms and conservation lands both stepped into the spotlight.*",
+  "lede": "This was a week that reminded Littleton how much is quietly being built \u2014 brick by brick, vote by vote, and step by step through the woods. The Massachusetts School Building Authority gave its approval to the Shaker Lane School building project budget, a significant green light for the effort to replace a 64-year-old elementary school that has defined generations of Littleton childhoods. The Building Committee met Wednesday evening to keep that momentum moving. And just as the school project crested a major milestone, word came that Littleton Middle School has earned a Blue Ribbon nomination and Littleton High School has been recognized both by the state and as a top-ten public high school in Greater Boston \u2014 a remarkable run of good news for a single school district in a single week.",
+  "sections": [
+   {
+    "kicker": "Schools in Focus",
+    "body": "The MSBA's approval of the Shaker Lane budget clears one of the most consequential hurdles in the long push to give Littleton's youngest students a building that meets their needs. Advocates have described the existing structure as 64 years old, and the Building Committee has been meeting monthly since at least the spring to shepherd the project forward. Wednesday's session was the latest in that steady drumbeat of planning work.\n\nAt the same time, the district's older students had cause to celebrate. Littleton Middle School's Blue Ribbon nomination and the high school's state recognition \u2014 alongside its top-ten ranking among Greater Boston public schools \u2014 paint a picture of a system performing well across all grade levels. The School Committee's Policy Subcommittee also convened Wednesday morning, a sign that behind the headlines, the routine governance work of running good schools never stops.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "A Trail Is Born",
+    "body": "Out at Long Lake Park Conservation Area, a new chapter opened this week: the Art Lazarus Trail is officially open to the public, and residents were invited to celebrate the occasion. The trail joins a broader outdoor recreation push that includes the ongoing Littleton Trails Hiking Challenge, which continues to draw walkers into town conservation land. For a town that takes its lakes and woodlands seriously \u2014 the Clean Lakes Committee has been meeting consistently since spring, and the Conservation Commission gathered as recently as September 8 \u2014 the trail opening is a tangible payoff for years of stewardship.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Town Hall at Work",
+    "body": "Monday evening brought a joint session of the Select Board and Finance Committee in Room 103 at Town Hall \u2014 the kind of working meeting that sets the agenda for bigger decisions ahead. The Zoning Board of Appeals convened Thursday, the Housing Authority Board met the same morning over on Shattuck Street, and the Community Preservation Committee gathered Wednesday. The Charter Committee is set to meet Monday the 21st, a reminder that Littleton's ongoing conversation about how it governs itself has not paused for the school season.\n\nThe Affordable Housing Trust and Planning Board both met in the days just before this week, with recordings now available \u2014 keeping the development and housing conversation visible to anyone who wants to follow along.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Looking Ahead",
+    "body": "The Select Board returns on September 28, giving the community another opportunity to hear how the school project budget approval shapes near-term financial planning. The Charter Committee's Monday meeting will be worth watching as that panel continues its work. And with the Conservation Commission and Clean Lakes Committee both active, residents curious about the health of Littleton's ponds and trails have no shortage of ways to stay engaged.",
+    "color": "#2C5BA6"
+   }
+  ],
+  "pull_quote": "A 64-year-old school, a brand-new trail, and a Blue Ribbon nomination \u2014 not a bad week for a small town.",
+  "threads": [
+   "Watch the Select Board's September 28 meeting for any signals about how the MSBA budget approval affects town finances.",
+   "The Charter Committee meets Monday, September 21 \u2014 follow what governance changes may be taking shape.",
+   "The Shaker Lane Building Committee will continue monthly \u2014 track when the project moves from planning to design or construction phases."
+  ],
+  "stats": {
+   "items": 88,
+   "meetings": 9,
+   "sources": 7,
+   "deadlines": 0
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
