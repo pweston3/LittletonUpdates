@@ -700,5 +700,56 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W39",
+  "date": "2026-09-21",
+  "range_label": "September 21\u201327, 2026",
+  "headline": "A New School, a New Trail, and a Busy Week Ahead",
+  "dek": "*Littleton's biggest building project in a generation moves forward just as the town pauses to honor one of its most dedicated stewards of the land.*",
+  "lede": "The biggest news out of Littleton this week has nothing to do with a meeting agenda or a Zoom link \u2014 it's the formal state blessing of a project that's been years in the making. The Massachusetts School Building Authority approved the budget for the Shaker Lane Elementary School replacement project, clearing a critical hurdle for a building that has served the town for 64 years and is long past its prime. The MSBA's sign-off means the work of actually replacing the school can move from aspiration to planning in earnest, and the Shaker Lane School Building Committee, which met on September 16th, is now focused on determining what comes next. For families with kids at Shaker Lane \u2014 and for anyone who cares about the long-term health of the school district \u2014 this is the week things got real.",
+  "sections": [
+   {
+    "kicker": "Building the Future",
+    "body": "With state approval now in hand, Littleton faces the practical and financial questions that follow a project of this scale. The School Committee's Budget Subcommittee met on September 18th, and a full School Committee meeting is scheduled for September 24th \u2014 expect the Shaker Lane project to loom large over both. The Select Board and Finance Committee held a joint session on September 14th, and those two bodies meet again together on September 23rd, a sign that town leadership is actively coordinating on the financial picture. The road to a new school is long, but this week marked a genuine turning point.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Honoring a Steward",
+    "body": "While the school project commanded the headlines, the Littleton Conservation Trust offered the town a quieter but equally meaningful moment: the official opening of the Art Lazarus Trail at Long Lake Park Conservation Area. The trail is named for a volunteer who gave 33 years of conservation work to this community \u2014 a remarkable tenure that deserves to be marked with more than a ribbon. The Conservation Trust's hiking challenge is also still underway, inviting residents to get out and explore the trails that volunteers like Art Lazarus spent decades protecting. It's a good week to lace up your boots.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Housing and Land Use",
+    "body": "The week ahead is dense with land-use business. The Finance Committee sits down jointly with the Affordable Housing Trust on September 22nd \u2014 a pairing that signals continued attention to housing affordability as a budget-level priority, not just a policy aspiration. The Planning Board meets September 24th, and the Zoning Board of Appeals wrapped up its own session on September 17th. The Conservation Commission, meeting virtually on September 22nd, will be followed in early October by public hearings on properties at 42 Shag Bark Drive and at 0 and 119 Taylor Street \u2014 parcels worth keeping an eye on as the town navigates the tension between development pressure and open-space preservation.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Civic Calendar",
+    "body": "The Town Clerk's office has posted November 2026 election information \u2014 a reminder that the civic season is shifting. The Charter Committee opens its work on September 21st, a body whose deliberations can shape the rules of local government for years to come. And the Reuben Hoar Library will host a presentation on the environmental risks of yard pesticides, framed around dramatic declines in insect populations including monarch butterflies \u2014 a timely program in a week when the town is also celebrating one man's 33-year commitment to the land.",
+    "color": "#2C5BA6"
+   }
+  ],
+  "pull_quote": "The Massachusetts School Building Authority approved the budget for the Shaker Lane Elementary School replacement project \u2014 and for a building that has served the town for 64 years, the clock is finally moving.",
+  "threads": [
+   "Watch the September 23rd joint Select Board and Finance Committee meeting for signals on how the town plans to fund the Shaker Lane school project.",
+   "The Conservation Commission's October 6th public hearings on 42 Shag Bark Drive and the Taylor Street parcels will offer an early look at development pressure on Littleton's open land.",
+   "November election information is now available from the Town Clerk \u2014 check the town website for deadlines on voter registration and absentee ballots."
+  ],
+  "stats": {
+   "items": 69,
+   "meetings": 11,
+   "sources": 7,
+   "deadlines": 1
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust"
+  ]
  }
 ]
