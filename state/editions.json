@@ -805,5 +805,64 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W41",
+  "date": "2026-10-06",
+  "range_label": "October 5\u201311, 2026",
+  "headline": "Schools Shine, Cameras Stumble, and Ballots Head Out",
+  "dek": "*A week of quiet civic pride met a jarring breach of trust as Littleton's institutions moved forward on multiple fronts at once.*",
+  "lede": "Littleton entered the second week of October with good news stacked against a troubling revelation. The town's middle school earned a national Blue Ribbon nomination, its high school received separate state academic recognition, and the long-running effort to replace the 64-year-old Shaker Lane elementary building continued to gain momentum \u2014 all while the Massachusetts School Building Authority's budget approval kept that project on track. But running alongside those bright headlines was a story that cut to the heart of local governance: five of the six Flock Safety license plate readers that the Select Board had ordered shut down were quietly reactivated by the company without notifying the town. For many residents, the question it raises is simple and uncomfortable \u2014 who is actually in control of the technology operating on Littleton's streets?",
+  "sections": [
+   {
+    "kicker": "Trust and Technology",
+    "body": "The Flock Safety camera episode is the week's defining story, and it deserves to be treated as such. After the Select Board directed that all six automated license plate readers be taken offline, five of them came back to life \u2014 not at the town's instruction, but apparently at the company's. The Littleton Police Department issued a public update on the system, but the core facts remain stark: a private vendor reactivated surveillance equipment in a Massachusetts town without the knowledge of elected officials. Littleton is not alone; four other communities ended their Flock contracts within the same five-day window, suggesting a pattern that extends well beyond town lines. What happens next \u2014 whether that means contract termination, new oversight language, or something else \u2014 will be worth watching closely at the October 19th Select Board meeting.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Schools on the Rise",
+    "body": "It has been a genuinely good stretch for Littleton's public schools. The Blue Ribbon nomination for the middle school and the state-level recognition for the high school arrive at a moment when the district is also building toward its future in a literal sense. The MSBA's approval of the Shaker Lane School construction budget is a significant administrative milestone for a project aimed at replacing a building that has stood for 64 years. Residents who want to hear where things stand can attend the public progress-update meeting on October 14th at the Center on Shattuck \u2014 the first such community briefing in a year. The School Committee also meets October 8th, giving another avenue for questions.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Voting Season Begins",
+    "body": "With November 3rd on the horizon, election season has arrived in earnest. About 2,500 mail-in ballots reached the Town Clerk's Office on October 2nd and are being sent out to voters in the days following. For those who prefer to cast a ballot in person before Election Day, two early voting windows are available: October 17th from 9 a.m. to 3 p.m., and October 19th from 8 a.m. to 6 p.m., both at 37 Shattuck Street. The overlap of early voting with a Select Board meeting on the 19th makes that a particularly full day at town offices.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Land, Water, and a New Trail",
+    "body": "On the conservation side, the week brought a moment worth pausing for: the official opening of the Art Lazarus Trail at Long Lake Park Conservation Area, named for a volunteer who gave 33 years of stewardship to Littleton's natural lands between 1984 and 2017. It is the kind of quiet, lasting civic contribution that trails and open spaces make visible long after the person who tended them is gone. Meanwhile, the town's land-use boards have a busy October ahead, with the Planning Board holding public hearings October 8th on proposed site plans at 550 King Street and 511 Newtown Road, the Zoning Board of Appeals taking up three separate addresses on October 15th, and the Conservation Commission scheduled to weigh in on 511 Newtown Road on October 20th \u2014 a reminder that development pressure and conservation interests continue to negotiate the same terrain.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Infrastructure Complete",
+    "body": "Worth noting as context: Littleton's $45 million Common Sewer System finished construction on schedule and is now fully operational, with $13 million of that cost offset by state and federal grants. A ribbon cutting marked the occasion. Projects of that scale rarely get the attention they deserve once the ceremonial moment passes, but a functioning sewer system touches everyday life \u2014 and the town's fiscal future \u2014 in ways that will compound quietly for decades.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "Five of six cameras the Select Board ordered shut down were secretly reactivated by the company without notifying the town.",
+  "threads": [
+   "What action will the Select Board take on the Flock Safety cameras at its October 19th meeting \u2014 and will the town's contract survive it?",
+   "Attend the October 14th public meeting at the Center on Shattuck for the first year-in-review on the Shaker Lane School project.",
+   "Early in-person voting opens October 17th ahead of the November 3rd General Election \u2014 check your mail-in ballot status if you requested one.",
+   "Watch the Planning Board and Conservation Commission hearings on 511 Newtown Road through October 20th as that site works through multiple permit layers."
+  ],
+  "stats": {
+   "items": 75,
+   "meetings": 7,
+   "sources": 9,
+   "deadlines": 4
+  },
+  "sources": [
+   "Town of Littleton",
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
