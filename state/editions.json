@@ -860,5 +860,61 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W42",
+  "date": "2026-10-12",
+  "range_label": "October 12\u201318, 2026",
+  "headline": "A Town Turning Corners: Schools, Sewers, and the Ballot Box",
+  "dek": "*From a state-approved school budget to a ribbon-cut sewer system, Littleton is cashing in years of hard civic work \u2014 all while asking residents to show up and vote.*",
+  "lede": "It is not every week that a town gets to declare two major infrastructure projects ready for their close-ups, but Littleton is having that week. The Massachusetts School Building Authority signed off on the budget for the new Shaker Lane Elementary School \u2014 the formal green light that turns a voter-approved dream into a construction reality \u2014 while across town, officials cut the ribbon on a $45 million Common Sewer System that has already begun drawing economic activity to the town center after nearly two years of work. Both milestones are the product of years of planning, public debate, and patience, and together they give this mid-October week a sense of earned momentum.",
+  "sections": [
+   {
+    "kicker": "The School Moves Forward",
+    "body": "A year after Littleton voters said yes to replacing their 64-year-old Shaker Lane elementary school, the project cleared its biggest bureaucratic hurdle: the MSBA approved the construction budget. That approval is not a formality \u2014 it is the key that unlocks state reimbursement and keeps the project on schedule. To mark the anniversary and bring neighbors up to speed, town officials and the project architect held a public Q&A at the Center on Shattuck on October 14, offering residents a chance to ask the questions that tend to get lost between ballot night and groundbreaking.\n\nThe Shaker Lane School Building Committee has been meeting regularly, and the School Committee has been tracking progress in parallel. The momentum is real, but so is the complexity ahead. What the MSBA approval confirms is that the planning phase is closing and the building phase is beginning.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Sewers and What They Unlock",
+    "body": "The ribbon cutting on the Common Sewer System is the kind of civic event that doesn't get nearly enough credit. Sewer infrastructure is unglamorous by definition, but a $45 million system coming online after nearly two years of construction is a genuine turning point for Littleton's town center \u2014 officials note it has already begun spurring economic development. For years, the absence of municipal sewer service was a quiet ceiling on what the center of town could become. That ceiling has now been lifted.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Water's Other Battle",
+    "body": "While the sewer system celebrates its debut, the Littleton Water Department is fighting a different kind of infrastructure story in federal court. The department filed suit to recover the $20.25 million it spent building a treatment plant to remove PFAS contamination from the Spectacle Pond drinking water supply. That price tag \u2014 paid to protect a community's tap water \u2014 is the kind of cost that a water department shouldn't have to absorb alone, and the lawsuit signals Littleton intends to hold responsible parties accountable. The department has also published its 2025 annual water quality report, and its source water protection program monitors 150 wells across 40 properties, a quiet but consequential layer of defense.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Get Out and Vote",
+    "body": "With a state election on the horizon, Littleton has early in-person voting available at 37 Shattuck Street \u2014 sessions were offered on October 17 and October 19, and mail-in ballots are available for the November 3 election. The Select Board meets October 19, the same day as one of those early voting windows, which is either a scheduling coincidence or a useful reminder that civic participation takes more than one form.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Trails and the Commons",
+    "body": "Beneath the bigger headlines, Littleton's conservation community has been quietly building something lasting. The Art Lazarus Trail at Long Lake Park Conservation Area \u2014 named for a volunteer who gave 33 years to local conservation \u2014 now has its ribbon cut and its invasive bittersweet cleared by a volunteer work party. The Trails Hiking Challenge continues to invite residents onto the town's conservation land. These are not small things. A community that tends its open space is a community that believes in its own future.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "Two ribbons cut, one lawsuit filed, one ballot box open \u2014 Littleton is doing the work.",
+  "threads": [
+   "Watch for the Shaker Lane Building Committee's next public meeting as design and contracting decisions move from planning into procurement.",
+   "The PFAS federal lawsuit is in its early stages \u2014 any court dates, filings, or settlement discussions will shape how much of that $20.25 million Littleton can recover.",
+   "Early voting closes before November 3; residents who haven't yet cast a ballot should confirm hours at 37 Shattuck Street before the window closes."
+  ],
+  "stats": {
+   "items": 56,
+   "meetings": 3,
+   "sources": 7,
+   "deadlines": 1
+  },
+  "sources": [
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
