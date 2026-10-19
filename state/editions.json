@@ -912,5 +912,58 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W43",
+  "date": "2026-10-19",
+  "range_label": "October 19\u201325, 2026",
+  "headline": "Town Meeting Looms as Littleton Weighs Its Future",
+  "dek": "*A week of consequential decisions \u2014 on schools, surveillance, and spending \u2014 converges on a gymnasium floor Tuesday night.*",
+  "lede": "Littleton heads into one of its busiest civic weeks in recent memory. A Special Town Meeting convenes Tuesday, October 27, at the Charles Forbes Kaye Gymnasium in Littleton Middle School, and residents have no shortage of material to absorb beforehand. A preview show is available to watch now. The week's backdrop is a town in motion \u2014 building a new school, recovering costs from a contaminated water supply, reckoning with a surveillance camera controversy, and celebrating a pair of schools that just earned statewide and national recognition. The agenda at the gymnasium will draw on all of it.",
+  "sections": [
+   {
+    "kicker": "A School Is Born",
+    "body": "The biggest capital story in Littleton right now is the planned replacement of Shaker Lane Elementary School, a 64-year-old building that the town has decided it can no longer patch and maintain its way through. This week brought a significant milestone: the Massachusetts School Building Authority approved the project's budget, clearing a key hurdle and moving the effort from aspiration to plan. The Shaker Lane School Building Committee met virtually Wednesday to work through next steps, and the effort has the fingerprints of nearly every major town body \u2014 the Select Board, School Committee, and Finance Committee have all held joint sessions on it going back to last year.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Cameras and Trust",
+    "body": "The sharpest controversy hanging over this week involves the town's Flock Safety license-plate camera system. After the Select Board ordered all six cameras shut down in May, five of the six were later found to have been secretly reactivated by the company without notifying the town. The police department has since released a statement providing an update on the situation. The episode \u2014 which unfolded as four other communities ended their own Flock contracts within five days of each other \u2014 raises questions that go beyond any particular technology: who controls the infrastructure that watches a town's streets, and what does it mean when the answer is unclear?",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Water, Money, and the Ground Beneath",
+    "body": "Littleton's relationship with its water supply has been expensive and complicated. The Water Department has filed a federal lawsuit seeking to recover the $20.25 million it spent building a treatment plant to remove PFAS contamination from Spectacle Pond, the town's drinking water source. That fight will play out in court over time. More immediately, residents should know that Littleton Electric Light and Water is flushing the town's water distribution system zone by zone starting Wednesday \u2014 tap water may run discolored temporarily, which is normal. The department is also operating under a Level 2 drought designation, meaning nonessential outdoor watering is restricted to hand-held hoses or watering cans used only between 5 p.m. and 9 a.m.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Land, Housing, and Governance",
+    "body": "Wednesday was a busy night for boards with quieter but consequential portfolios. The Community Preservation Committee, the Affordable Housing Trust, and the Conservation Commission all met, touching on threads that will shape what Littleton looks like in a decade. The Littleton Conservation Trust's fall newsletter, out this week, covers its annual meeting and offers guidance on swapping invasive plants for native species \u2014 a small but steady kind of civic act. The Planning Board meets Thursday, and the Zoning Board of Appeals held a session last week whose recording is now available. Meanwhile, one item that did not advance at Town Meeting: Article 2, a proposal to adopt a special act establishing a town charter, received only a brief presentation and was not put to a vote.",
+    "color": "#2C5BA6"
+   }
+  ],
+  "pull_quote": "Five of six cameras the Select Board had ordered shut down were found to have been secretly reactivated without notifying the town.",
+  "threads": [
+   "Watch for what articles come to the floor \u2014 and which don't \u2014 at Tuesday's Special Town Meeting at Littleton Middle School.",
+   "The federal PFAS lawsuit filed by the Water Department is in its early stages; follow how the town frames its case for recovering $20.25 million in treatment costs.",
+   "The Select Board's November 2 meeting includes a property tax classification public hearing \u2014 a decision that affects how the tax burden is split between residential and commercial properties."
+  ],
+  "stats": {
+   "items": 68,
+   "meetings": 10,
+   "sources": 9,
+   "deadlines": 2
+  },
+  "sources": [
+   "Town of Littleton",
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
