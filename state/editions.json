@@ -915,47 +915,52 @@
  },
  {
   "iso": "2026-W43",
-  "date": "2026-10-19",
+  "date": "2026-10-25",
   "range_label": "October 19\u201325, 2026",
-  "headline": "Town Meeting Looms as Littleton Weighs Its Future",
-  "dek": "*A week of consequential decisions \u2014 on schools, surveillance, and spending \u2014 converges on a gymnasium floor Tuesday night.*",
-  "lede": "Littleton heads into one of its busiest civic weeks in recent memory. A Special Town Meeting convenes Tuesday, October 27, at the Charles Forbes Kaye Gymnasium in Littleton Middle School, and residents have no shortage of material to absorb beforehand. A preview show is available to watch now. The week's backdrop is a town in motion \u2014 building a new school, recovering costs from a contaminated water supply, reckoning with a surveillance camera controversy, and celebrating a pair of schools that just earned statewide and national recognition. The agenda at the gymnasium will draw on all of it.",
+  "headline": "Town Meeting, a New School, and a Week of Big Decisions",
+  "dek": "*Littleton heads into a pivotal stretch with a Special Town Meeting, a school building milestone, and a busy civic calendar all converging at once.*",
+  "lede": "It is hard to overstate how much is happening in Littleton right now. The week of October 19 brought a cascade of board meetings, a major state approval for the Shaker Lane School project, and the final preparations for a Special Town Meeting on October 27 \u2014 all while early voting opened at Town Hall and Election Day loomed just around the corner. For a town that sometimes moves quietly, this week was anything but quiet.",
   "sections": [
    {
-    "kicker": "A School Is Born",
-    "body": "The biggest capital story in Littleton right now is the planned replacement of Shaker Lane Elementary School, a 64-year-old building that the town has decided it can no longer patch and maintain its way through. This week brought a significant milestone: the Massachusetts School Building Authority approved the project's budget, clearing a key hurdle and moving the effort from aspiration to plan. The Shaker Lane School Building Committee met virtually Wednesday to work through next steps, and the effort has the fingerprints of nearly every major town body \u2014 the Select Board, School Committee, and Finance Committee have all held joint sessions on it going back to last year.",
+    "kicker": "School on the Move",
+    "body": "The biggest structural news of the week came from the Massachusetts School Building Authority, which approved the budget for the Shaker Lane School building project \u2014 a critical green light for a community trying to replace a 64-year-old elementary school. The Shaker Lane School Building Committee met virtually on October 21 to continue its work, and the School Committee gathered the following evening in a hybrid session at the Littleton Police Department community room. The pace of meetings reflects the scope of what's at stake: a project of this scale requires sustained coordination across multiple bodies, and this week showed all of them moving in step.",
     "color": "#C8881A"
    },
    {
-    "kicker": "Cameras and Trust",
-    "body": "The sharpest controversy hanging over this week involves the town's Flock Safety license-plate camera system. After the Select Board ordered all six cameras shut down in May, five of the six were later found to have been secretly reactivated by the company without notifying the town. The police department has since released a statement providing an update on the situation. The episode \u2014 which unfolded as four other communities ended their own Flock contracts within five days of each other \u2014 raises questions that go beyond any particular technology: who controls the infrastructure that watches a town's streets, and what does it mean when the answer is unclear?",
+    "kicker": "Town Meeting Week",
+    "body": "Tuesday, October 27 is shaping up to be one of the busiest single evenings in recent Littleton civic memory. A Special Town Meeting is scheduled for 7:00 PM in the Charles Forbes Kaye Gymnasium at Littleton Middle School, preceded at 6:00 PM by a joint meeting of the Select Board and Finance Committee in the same building. The Community Preservation Committee will also convene as part of the Special Town Meeting proceedings. Residents tuning in ahead of time could catch the Town Meeting Preview Show to get their bearings. One item already telegraphed: Article 2, which would have adopted a special act establishing a Town Charter, will receive only a brief presentation \u2014 no vote is planned on that measure.",
     "color": "#2E7D5B"
    },
    {
-    "kicker": "Water, Money, and the Ground Beneath",
-    "body": "Littleton's relationship with its water supply has been expensive and complicated. The Water Department has filed a federal lawsuit seeking to recover the $20.25 million it spent building a treatment plant to remove PFAS contamination from Spectacle Pond, the town's drinking water source. That fight will play out in court over time. More immediately, residents should know that Littleton Electric Light and Water is flushing the town's water distribution system zone by zone starting Wednesday \u2014 tap water may run discolored temporarily, which is normal. The department is also operating under a Level 2 drought designation, meaning nonessential outdoor watering is restricted to hand-held hoses or watering cans used only between 5 p.m. and 9 a.m.",
+    "kicker": "Infrastructure Milestones",
+    "body": "While town government gears up for its big meeting, Littleton's utility infrastructure had a quietly momentous week of its own. The new Littleton Common Sewer System is now fully operational after nearly two years of construction, marked by a ribbon cutting. Meanwhile, a townwide flushing of the water distribution system began on October 21 and will continue through November \u2014 routine maintenance, but a reminder of how much runs beneath the streets. On a harder note, the Littleton Water Department has filed a federal lawsuit seeking to recover costs incurred from removing PFAS \u2014 so-called forever chemicals \u2014 from the water supply, a fight playing out in courtrooms that began long before this week and will continue long after it.",
     "color": "#2A7E8C"
    },
    {
-    "kicker": "Land, Housing, and Governance",
-    "body": "Wednesday was a busy night for boards with quieter but consequential portfolios. The Community Preservation Committee, the Affordable Housing Trust, and the Conservation Commission all met, touching on threads that will shape what Littleton looks like in a decade. The Littleton Conservation Trust's fall newsletter, out this week, covers its annual meeting and offers guidance on swapping invasive plants for native species \u2014 a small but steady kind of civic act. The Planning Board meets Thursday, and the Zoning Board of Appeals held a session last week whose recording is now available. Meanwhile, one item that did not advance at Town Meeting: Article 2, a proposal to adopt a special act establishing a town charter, received only a brief presentation and was not put to a vote.",
+    "kicker": "Land, Lakes, and Trails",
+    "body": "Conservation had a moment to celebrate this week with the official opening of the Art Lazarus Trail on the Long Lake Park Conservation Area \u2014 a new recreational asset for residents who enjoy the town's natural spaces. The Clean Lakes Committee and Conservation Commission both held their regular meetings, and the Littleton Conservation Trust published its Fall 2026 newsletter, highlighting native plant initiatives and a year's worth of stewardship work. Separately, the Lupoli Companies are scheduled to present a public update on the recently approved 410 Great Road project on November 3, giving neighbors a chance to hear directly from the developer about what comes next for that site.",
     "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Votes Ahead",
+    "body": "Early in-person voting opened October 26 at Town Hall on Shattuck Street, running from 8:00 AM to 6:00 PM. The State Election follows on November 3 at Littleton Middle School, polls open 7:00 AM to 8:00 PM. Before that, the Select Board meets November 2 and will hold a public hearing on the property tax classification \u2014 a decision that directly affects how the tax burden is distributed between residential and commercial properties heading into the new fiscal year.",
+    "color": "#102A54"
    }
   ],
-  "pull_quote": "Five of six cameras the Select Board had ordered shut down were found to have been secretly reactivated without notifying the town.",
+  "pull_quote": "A 64-year-old school, a new sewer system, a trail opening, and a Special Town Meeting \u2014 Littleton is building toward something.",
   "threads": [
-   "Watch for what articles come to the floor \u2014 and which don't \u2014 at Tuesday's Special Town Meeting at Littleton Middle School.",
-   "The federal PFAS lawsuit filed by the Water Department is in its early stages; follow how the town frames its case for recovering $20.25 million in treatment costs.",
-   "The Select Board's November 2 meeting includes a property tax classification public hearing \u2014 a decision that affects how the tax burden is split between residential and commercial properties."
+   "Watch the Special Town Meeting on October 27 closely \u2014 the articles on the warrant will shape town spending and policy well into next year.",
+   "The Shaker Lane School Building Committee's next steps following the MSBA budget approval will be worth tracking as the project moves toward design and community input phases.",
+   "The Lupoli Companies' November 3 presentation on 410 Great Road is the first public update since the project was approved \u2014 neighbors along Great Road will want to attend.",
+   "The Select Board's property tax classification hearing on November 2 could affect both homeowners and local businesses; the outcome is worth watching before the rate is set."
   ],
   "stats": {
-   "items": 68,
-   "meetings": 10,
-   "sources": 9,
-   "deadlines": 2
+   "items": 86,
+   "meetings": 15,
+   "sources": 8,
+   "deadlines": 3
   },
   "sources": [
-   "Town of Littleton",
    "Town Meeting Calendar",
    "Agenda Center",
    "Town News & Announcements",
