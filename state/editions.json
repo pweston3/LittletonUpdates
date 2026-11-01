@@ -973,47 +973,46 @@
  },
  {
   "iso": "2026-W44",
-  "date": "2026-10-26",
+  "date": "2026-11-01",
   "range_label": "Oct 26 \u2013 Nov 1, 2026",
-  "headline": "Town Meeting, a New School, and a Busy Election Week",
-  "dek": "*Littleton's biggest civic week in years arrives with a school project moving forward, voters heading to the polls, and a town charter question on the table.*",
-  "lede": "Few weeks ask as much of Littleton residents as this one. On Tuesday, October 27th, the Select Board and Finance Committee convened jointly at the middle school before the Special Town Meeting called residents into the Charles Forbes Kaye Gymnasium \u2014 the same building that has become the de facto center of Littleton's civic life. Early in-person voting opened Monday at 37 Shattuck Street, and the State Election itself follows on November 3rd at Littleton Middle School. Layered beneath the electoral calendar is a school building project that is rapidly picking up momentum, a new trail opening, and a water department taking polluters to federal court.",
+  "headline": "Schools, Sewers, and a Special Town Meeting Shape Littleton's Week",
+  "dek": "*A 64-year-old school gets its clearest path yet to replacement, a new sewer system opens for business, and residents packed the middle school gym to vote \u2014 all in one week.*",
+  "lede": "It was the kind of week that reminds you how much civic life a small town can sustain. On Tuesday evening, October 27, residents gathered at the Charles Forbes Kaye Gymnasium at Littleton Middle School for a Special Town Meeting, with the Select Board and Finance Committee convening jointly beforehand to set the stage. Unofficial results from that meeting have since been posted. And as if the gym weren't busy enough, that same building will host the state election polls on November 3 \u2014 meaning Russell Street is becoming the undisputed center of Littleton's civic universe this fall.",
   "sections": [
    {
-    "kicker": "Town Meeting",
-    "body": "Tuesday's Special Town Meeting was preceded by a joint session of the Select Board and Finance Committee \u2014 a signal that the warrant carried items with real financial weight. Among them, Article 9 proposes $50,000 to rehabilitate the long-dormant ball fields behind the high school, a practical stopgap to preserve athletic space for youth leagues while Shaker Lane School construction runs through mid-2027. On the more consequential end, Article 2 would have put a Town Charter before voters, but residents were informed ahead of time that no vote would be taken \u2014 only a presentation. The charter conversation, it seems, will continue on another day.",
+    "kicker": "A School's Moment",
+    "body": "The biggest running story in town took several steps forward at once. The Massachusetts School Building Authority approved the budget for the Shaker Lane elementary school building project \u2014 a critical milestone for a community trying to replace a 64-year-old building. The Shaker Lane Building Committee met October 21, the School Committee gathered October 22 at the Littleton Police Department community room, and the Shaker Lane Site Council convened October 27. That's three separate bodies, in one week, all moving the same project forward.\n\nThe momentum arrived alongside welcome recognition from outside town limits. Littleton Middle School has been nominated for a National Blue Ribbon award, and Littleton High School received separate state recognition for academic performance \u2014 a reminder that even as the community debates what to build next, what's happening inside the current buildings is worth celebrating.",
     "color": "#C8881A"
    },
    {
-    "kicker": "A School Taking Shape",
-    "body": "The Shaker Lane School project \u2014 replacing a 64-year-old elementary building \u2014 cleared a significant milestone when the Massachusetts School Building Authority approved the project's budget, as reported by the Lowell Sun. The Building Committee, which elected new leadership, is now targeting a 60% design submission in December, with community outreach underway. The committee met virtually on October 21st and has been meeting regularly alongside the School Committee, which gathered on October 22nd. The pieces of a very large, very expensive construction project are clicking into place, and residents will have more chances to weigh in as design details solidify.",
+    "kicker": "Infrastructure, Old and New",
+    "body": "While the school conversation looks ahead, two major utility stories bookend where Littleton has already been. The town's new $45 million common sewer system \u2014 nearly two years in the making and supported by $13 million in grants \u2014 is now fully operational and already showing signs of spurring economic activity in the town center. It's the kind of project that rarely gets a parade, but probably deserves one.\n\nLess celebratory is the water department's federal lawsuit seeking to recover the $20.25 million it spent building a treatment plant to remove PFAS contamination from the Spectacle Pond drinking water supply. Meanwhile, LELWD received a $285,522 state grant to replace aging electrical equipment in Littleton and Boxborough, aimed at reducing the length and impact of power outages. And if your tap water looks a little cloudy this month, don't be alarmed \u2014 the water utility is flushing the distribution system zone by zone through October and November.",
     "color": "#2E7D5B"
    },
    {
-    "kicker": "Your Vote, Your Week",
-    "body": "The civic calendar this week doubles as an election calendar. Early in-person voting ran Monday, October 26th, from 8 a.m. to 6 p.m. at 37 Shattuck Street. The State Election is Tuesday, November 3rd, at Littleton Middle School from 7 a.m. to 8 p.m. \u2014 the same day the Financial Policy Committee meets at Town Hall and Lupoli Companies presents a public update on the 410 Great Road development at 33 Shattuck Street. It's worth planning ahead: Russell Street will be busy.",
+    "kicker": "Housing and Development",
+    "body": "The 410 Great Road affordable senior housing project, developed by Lupoli Companies, is holding a public update at the Center on Shattuck on November 3 from 12:30 to 1:30 p.m. \u2014 the same day as the state election, so plan your afternoon accordingly. The Affordable Housing Trust met October 21, and the Planning Board held sessions on both October 8 and October 22, keeping the town's development pipeline moving. The Select Board will hold a property tax classification public hearing on November 2 at Town Hall, a routine but consequential annual step that shapes how the tax burden falls across residential and commercial properties.",
     "color": "#2A7E8C"
    },
    {
-    "kicker": "Water and Ground",
-    "body": "Two pieces of infrastructure news deserve attention this week. The Littleton Water Department has filed a federal lawsuit to recover costs associated with removing PFAS \u2014 per- and polyfluoroalkyl substances \u2014 from the town's water supply, putting the financial burden of that remediation squarely on the companies responsible. Separately, the town celebrated a ribbon cutting for the new Littleton Common Sewer System, which is now fully operational after nearly two years of construction. Meanwhile, the Art Lazarus Trail on the Long Lake Park Conservation Area officially opened, giving hikers a new route to explore \u2014 and the Littleton Conservation Trust's fall newsletter highlights native plant choices and the ongoing Trails Hiking Challenge for those who want to make good use of it.",
+    "kicker": "Land and Water",
+    "body": "On the conservation front, the Littleton Conservation Trust officially opened the Art Lazarus Trail at Long Lake Park Conservation Area, honoring a volunteer who gave 33 years of service to conservation work in town. The Trust's Fall 2026 newsletter is also out, with guidance on swapping invasive plants for native species and a look back at the year's work. The Clean Lakes Committee met October 22, and the ongoing Littleton Trails Hiking Challenge continues to draw residents out onto the town's trail network. A Conservation Commission public meeting is scheduled for 24 Green Needles Road on November 17.",
     "color": "#2C5BA6"
    }
   ],
-  "pull_quote": "Few weeks ask as much of Littleton residents as this one.",
+  "pull_quote": "A 64-year-old school, a brand-new sewer system, and a federal lawsuit \u2014 Littleton is reckoning with its infrastructure all at once.",
   "threads": [
-   "Watch for the Shaker Lane Building Committee's 60% design submission, expected in December \u2014 that package will show residents what the new school will actually look like.",
-   "The Town Charter presentation at Special Town Meeting sets up a longer conversation; follow whether the Select Board schedules further public sessions on the proposal.",
-   "The Lupoli Companies update on 410 Great Road (November 3rd, 33 Shattuck St., 12:30 p.m.) is the first public look at the recently approved project \u2014 worth attending if you care about development on the corridor."
+   "State election day is November 3 at Littleton Middle School \u2014 polls open 7 a.m. to 8 p.m., same day as the 410 Great Road housing project public update at the Center on Shattuck.",
+   "The Select Board meets November 2 for its regular session and the property tax classification public hearing \u2014 watch for how the board frames the fiscal year ahead.",
+   "The MSBA budget approval for Shaker Lane sets up the next phase of the school building process; follow the Building Committee for timelines and community input opportunities."
   ],
   "stats": {
-   "items": 88,
-   "meetings": 7,
-   "sources": 9,
-   "deadlines": 3
+   "items": 57,
+   "meetings": 4,
+   "sources": 8,
+   "deadlines": 2
   },
   "sources": [
-   "Sean Aherne",
    "Town Meeting Calendar",
    "Agenda Center",
    "Town News & Announcements",
