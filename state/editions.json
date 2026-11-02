@@ -1022,5 +1022,64 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W45",
+  "date": "2026-11-02",
+  "range_label": "November 2\u20138, 2026",
+  "headline": "Littleton Votes, Breaks Ground, and Hits the Trail",
+  "dek": "*A week of ribbon-cuttings and ballot boxes captures a town investing in its future all at once.*",
+  "lede": "If there is a single theme running through Littleton this first week of November, it is the satisfying weight of things finally finished \u2014 and the honest uncertainty of what comes next. The $45 million Littleton Common Sewer System is now fully operational, a new trail at Long Lake Park has been named for a beloved conservation volunteer, and the Massachusetts School Building Authority has signed off on the budget to replace the 64-year-old Shaker Lane Elementary School. Meanwhile, residents headed to the polls on Tuesday for the state election at Littleton Middle School, the same building that hosted a Special Town Meeting just days before. Littleton is, in the span of a single week, cutting ribbons and casting votes \u2014 and the two feel very much related.",
+  "sections": [
+   {
+    "kicker": "Town Meeting & Ballot",
+    "body": "The week opened with the Oct. 27 Special Town Meeting, where the Select Board and Finance Committee had gathered jointly at Littleton Middle School beforehand to lay groundwork for the articles before residents. Unofficial results from that meeting are now posted. The Community Preservation Committee also held its own Special Town Meeting session that same evening in the school gymnasium. Then, just days later, the polls opened Tuesday, November 3rd at Littleton Middle School \u2014 making the Russell Street building the civic center of the week in a very literal sense. The Select Board capped things off Monday night with its regular meeting followed by a public hearing on property tax classification, the annual ritual of deciding how the tax burden is shared between residential and commercial properties.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Shaker Lane's Moment",
+    "body": "The news that the Massachusetts School Building Authority has approved the budget for a new Shaker Lane School is the kind of milestone that tends to get buried in a busy week but shouldn't be. The building is 64 years old, and the path to replacing it has been long. With MSBA's blessing now secured, the Building Committee \u2014 which met October 21st \u2014 turns its attention to next steps. The Shaker Lane Site Council also convened October 27th, giving the school's own community a chance to stay close to the process. Watch this space: the real decisions about design, timeline, and cost to taxpayers are still ahead.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "Infrastructure, Above and Below",
+    "body": "The ribbon cutting on the Littleton Common Sewer System marks the completion of a two-year, $45 million project \u2014 and town officials note it is already attracting economic development to the town center. That is the promise of buried infrastructure: you can't see it, but you can see what it makes possible. Meanwhile, Littleton Electric Light and Water had a newsworthy week of its own. The department landed a $285,522 state grant to upgrade equipment that limits the scope of power outages, a practical win for reliability. On a far less cheerful note, LELWD has filed a federal lawsuit seeking to recover the $20.25 million it spent building a treatment plant to remove PFAS contamination from the Spectacle Pond drinking water supply. Residents may also notice temporarily discolored tap water over the coming weeks as the utility conducts its townwide system flush by zones.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Trails & Open Space",
+    "body": "Amid the civic business, Littleton paused to celebrate one of its own. The Art Lazarus Trail at Long Lake Park Conservation Area is now officially open, named in honor of a long-time conservation volunteer. The Littleton Conservation Trust, whose fall newsletter is also out this week, continues to run its Hiking Challenge, inviting residents to get out and log miles on local trails. It is a good reminder that the town's commitment to open space is not just a line in a budget \u2014 it is something people actually use.",
+    "color": "#2C5BA6"
+   },
+   {
+    "kicker": "Housing on the Horizon",
+    "body": "On the development front, Lupoli Companies presented an update on the approved 410 Great Road senior affordable housing project at the Center on Shattuck on November 3rd. The Affordable Housing Trust, which met in October, continues its work in the background. With the new sewer line opening up the town center and housing conversations actively underway, the shape of Littleton's growth over the next decade is beginning to come into focus \u2014 even if the details are still being negotiated meeting by meeting.",
+    "color": "#102A54"
+   }
+  ],
+  "pull_quote": "Littleton is cutting ribbons and casting votes in the same week \u2014 and the two feel very much related.",
+  "threads": [
+   "Shaker Lane School: now that MSBA has approved the budget, watch for the Building Committee to move toward design and community cost conversations in the months ahead.",
+   "410 Great Road senior housing: Lupoli Companies' update this week signals the project is moving \u2014 the next question is timeline and how it integrates with the new sewer infrastructure.",
+   "PFAS lawsuit: Littleton Water Department's federal case to recover $20.25 million in treatment costs will unfold slowly, but the outcome has real implications for ratepayers and municipal finance.",
+   "Property tax classification: the Select Board's public hearing this week sets the residential-commercial tax split \u2014 final figures are worth watching when they are confirmed."
+  ],
+  "stats": {
+   "items": 63,
+   "meetings": 5,
+   "sources": 9,
+   "deadlines": 2
+  },
+  "sources": [
+   "Town of Littleton",
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Reddit",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
