@@ -1182,5 +1182,57 @@
    "Littleton Conservation Trust",
    "Littleton Electric Light & Water"
   ]
+ },
+ {
+  "iso": "2026-W48",
+  "date": "2026-11-23",
+  "range_label": "November 23\u201329, 2026",
+  "headline": "A New School Takes Shape, and the Town Takes Stock",
+  "dek": "*From a landmark school building approval to a quiet conservation victory, Littleton spent this week laying foundations \u2014 literal and civic.*",
+  "lede": "The biggest news in Littleton this week has been years in the making: the Massachusetts School Building Authority has approved the budget for the Shaker Lane School construction project, a critical milestone in the town's effort to replace a 64-year-old elementary school building. The Shaker Lane School Building Committee met on November 18th \u2014 its second formal gathering in as many months \u2014 keeping the planning machinery turning. With the MSBA's stamp of approval now in hand, the question shifts from whether Littleton will get a new school to how, and how soon, it will be built.",
+  "sections": [
+   {
+    "kicker": "The School Question",
+    "body": "For a town that has been living with an aging elementary school for more than six decades, the MSBA budget approval is the kind of news that lands with real weight. The Building Committee has been meeting regularly \u2014 virtually, via Zoom \u2014 and the School Committee itself convened on November 19th, with a budget subcommittee session already on the calendar for November 30th. The pace of meetings signals that Littleton's school leadership is not letting momentum slip. Replacing an elementary school is among the most consequential decisions a small town can make, touching everything from bond financing to classroom design to the daily lives of hundreds of children and families.",
+    "color": "#C8881A"
+   },
+   {
+    "kicker": "Town Hall Tensions",
+    "body": "While the school story dominated public attention, the Select Board issued a formal statement this week regarding the Town Administrator's contract \u2014 a development that, while sparse on public detail, rarely surfaces without some underlying friction. The Board has met repeatedly in recent weeks, and the posting of minutes from earlier fall meetings suggests the public record is catching up with a busy stretch of governance. Residents watching town administration closely will want to follow how this contract question resolves.",
+    "color": "#2E7D5B"
+   },
+   {
+    "kicker": "A Win for Conservation",
+    "body": "Town Meeting's vote to approve Article 11 \u2014 a citizen petition banning second-generation anticoagulant rodenticides on Littleton public property \u2014 earned a celebratory announcement this week. The measure reflects a growing thread of environmental stewardship running through town civic life. That same spirit showed up in the Littleton Conservation Trust's public update on the former Nagog Hill Orchard, now rebranded as Hopewell, which was presented to the community at Reuben Hoar Library earlier this month. The Clean Lakes Committee has also been active, and the Conservation Commission has a full docket of public hearings coming up on December 1st, covering properties along Tahattawan Road and Great Road.",
+    "color": "#2A7E8C"
+   },
+   {
+    "kicker": "Development Watch",
+    "body": "The Zoning Board of Appeals and Planning Board have both been busy. The ZBA held public hearings in October on properties at Nicole Lane, Whitcomb Avenue, and Cataldo Pond Way, and meets again on December 1st. The Planning Board met as recently as November 19th and has another session scheduled for December 3rd. Taken together, this steady drumbeat of land-use activity \u2014 alongside the Affordable Housing Trust's fall meetings \u2014 suggests that development pressure in Littleton is not letting up as the year closes.",
+    "color": "#2C5BA6"
+   }
+  ],
+  "pull_quote": "Replacing a 64-year-old school is among the most consequential decisions a small town can make.",
+  "threads": [
+   "Watch for the School Committee Budget Subcommittee meeting on November 30th, which could signal the next phase of school project financing.",
+   "The Select Board's statement on the Town Administrator's contract leaves questions unanswered \u2014 follow whether a resolution is announced in the coming weeks.",
+   "Conservation Commission public hearings on December 1st covering multiple Great Road and Tahattawan Road properties will reveal what development pressures look like on the ground."
+  ],
+  "stats": {
+   "items": 92,
+   "meetings": 4,
+   "sources": 8,
+   "deadlines": 4
+  },
+  "sources": [
+   "Town of Littleton",
+   "Town Meeting Calendar",
+   "Agenda Center",
+   "Town News & Announcements",
+   "Littleton Public Schools",
+   "Littleton Community Television",
+   "Littleton Conservation Trust",
+   "Littleton Electric Light & Water"
+  ]
  }
 ]
